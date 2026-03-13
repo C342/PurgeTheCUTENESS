@@ -322,6 +322,10 @@ MonoBehaviour:
   Speed: 20
   jumpForce: 45
   GroundCheck: {fileID: 336865449}
+  groundCheckY: 0.2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!212 &552759887
 SpriteRenderer:
   m_ObjectHideFlags: 0
