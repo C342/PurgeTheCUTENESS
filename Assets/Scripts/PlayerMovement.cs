@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float jumpForce;
 
     [Header("Ground Check Settings")]
+
     [SerializeField] public Transform GroundCheck;
     [SerializeField] private float groundCheckY = 0.2f;
     [SerializeField] private float groundCheckX = 0.5f;
@@ -33,10 +34,11 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
-    //void CameraTransform(Transform playerCamera)
-    //{
-    //    playerCamera.transform.GetChild.SetParent(playerCamera, false);
-    //}
+    void CameraTransform(Transform playerCamera)
+    {
+        Transform child = playerCamera.GetChild(0);
+        child.SetParent(playerCamera, false);
+    }
 
     void GetInputs()
     {
