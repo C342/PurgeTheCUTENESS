@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Collections;
 using UnityEngine;
 
@@ -20,13 +21,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckX = 0.5f;
     [SerializeField] private LayerMask whatIsGround;
 
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashCooldown;
+
     [Header("Player Camera Settings")]
     [SerializeField] public Transform playerCamera;
 
     PlayerStateList pState;
     private Rigidbody2D rb;
     private float xAxis;
+    private float gravity;
     Animator anim;
+    private bool canDash;
 
     public static PlayerMovement Instance;
 
@@ -52,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         anim = GetComponent<Animator>();
+
+        gravity = rb.gravityScale;
     }
 
     private void Update()
@@ -77,6 +86,28 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         rb.linearVelocity = new Vector2(Speed * xAxis, rb.linearVelocity.y);
+    }
+
+    void StartDash()
+    {
+        if (Input.GetButtonDown("Dash") && canDash)
+        {
+
+        }
+    }
+
+    IEnumerator Dash()
+    {
+        canDash = false;
+        pState.dashing = true;
+        anim.SetTrigger("Dashing");
+        rb.gravityScale = 0;
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        yield return new WaitForSeconds(dashTime);
+        rb.gravityScale = gravity;
+        pState.dashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     public bool Grounded()
