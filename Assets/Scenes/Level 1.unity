@@ -609,8 +609,9 @@ MonoBehaviour:
   Speed: 15
   jumpForce: 35
   jumpBufferFrames: 8
+  coyoteTime: 0.1
   GroundCheck: {fileID: 336865449}
-  groundCheckY: 0.2
+  groundCheckY: 0.1
   groundCheckX: 0.5
   whatIsGround:
     serializedVersion: 2
