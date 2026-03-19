@@ -23,6 +23,6 @@ public class RegularEnemy : MonoBehaviour
     public virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = PlayerMovement.Instance;
+        //player = PlayerMovement.Instance;
     }
 }

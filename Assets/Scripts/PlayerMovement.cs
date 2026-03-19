@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] public float Speed;
     [SerializeField] public float jumpForce;
+    private int jumpBufferCounter = 0;
+    [SerializeField] private int jumpBufferFrames;
 
     [Header("Ground Check Settings")]
 
@@ -19,20 +21,41 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Camera Settings")]
     [SerializeField] public Transform playerCamera;
 
+    PlayerStateList pState;
     private Rigidbody2D rb;
     private float xAxis;
+    Animator anim;
+
+    public static PlayerMovement Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     bool attack = false;
     float timeBetweenAttack, timeSinceAttack;
 
     private void Start()
     {
+        pState = GetComponent<PlayerStateList>();
+
         rb = GetComponent<Rigidbody2D>();
+
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         GetInputs();
+        UpdateJumpVariable();
         Move();
         Jump();
     }
@@ -70,9 +93,44 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
+        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+
+            pState.jumping = false;
+        }
+
+        if (!pState.jumping)
+        {
+            if (jumpBufferCounter > 0 && Grounded())
+            {
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
+
+                pState.jumping = true;
+            }
+        }
         if (Input.GetButtonDown("Jump") && Grounded())
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce);
+
+            pState.jumping = true;
+        }
+    }
+
+    void UpdateJumpVariable()
+    {
+        if (Grounded())
+        {
+            pState.jumping = false;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferFrames;
+        }
+        else
+        {
+            jumpBufferCounter--;
         }
     }
 }
