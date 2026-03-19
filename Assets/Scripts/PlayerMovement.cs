@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int jumpBufferFrames;
     private float coyoteTimeCounter = 0;
     [SerializeField] private float coyoteTime;
+    [SerializeField] private int facingDirection = 1;
 
     [Header("Ground Check Settings")]
 
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckX = 0.5f;
     [SerializeField] private LayerMask whatIsGround;
 
+    [Header("Dash Settings")]
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
     [SerializeField] private float dashCooldown;
@@ -33,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
     private float xAxis;
     private float gravity;
     Animator anim;
-    private bool canDash;
+    private bool canDash = true;
+    private bool dashed;
 
     public static PlayerMovement Instance;
 
@@ -63,12 +66,16 @@ public class PlayerMovement : MonoBehaviour
         gravity = rb.gravityScale;
     }
 
-    private void Update()
+    void Update()
     {
         GetInputs();
         UpdateJumpVariable();
+
+        if (pState.dashing) return;
+        Flip();
         Move();
         Jump();
+        StartDash();
     }
 
     void CameraTransform(Transform playerCamera)
@@ -90,9 +97,14 @@ public class PlayerMovement : MonoBehaviour
 
     void StartDash()
     {
-        if (Input.GetButtonDown("Dash") && canDash)
+        if (Input.GetButtonDown("Dash") && canDash && !dashed)
         {
-
+            StartCoroutine(Dash());
+            dashed = true;
+        }
+        if (Grounded())
+        {
+            dashed = false;
         }
     }
 
@@ -102,12 +114,26 @@ public class PlayerMovement : MonoBehaviour
         pState.dashing = true;
         anim.SetTrigger("Dashing");
         rb.gravityScale = 0;
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        rb.linearVelocity = new Vector2(facingDirection * dashSpeed, 0);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
         pState.dashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    void Flip()
+    {
+        if (xAxis < 0)
+        {
+            transform.localScale = new Vector2(-1, transform.localScale.y);
+            facingDirection = -1;
+        }
+        else if (xAxis > 0)
+        {
+            transform.localScale = new Vector2(1, transform.localScale.y);
+            facingDirection = 1;
+        }
     }
 
     public bool Grounded()
