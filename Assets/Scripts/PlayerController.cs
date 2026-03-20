@@ -3,17 +3,17 @@ using System.Collections;
 using Unity.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings")]
 
     [SerializeField] public float Speed;
     [SerializeField] public float jumpForce;
-    private int jumpBufferCounter = 0;
-    [SerializeField] private int jumpBufferFrames;
+    private float jumpBufferCounter = 0;
+    [SerializeField] private float jumpBufferFrames;
     private float coyoteTimeCounter = 0;
     [SerializeField] private float coyoteTime;
-    [SerializeField] private int facingDirection = 1;
+    private int facingDirection = 1;
 
     [Header("Ground Check Settings")]
 
@@ -30,15 +30,23 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Camera Settings")]
     [SerializeField] public Transform playerCamera;
 
+    [Header("Attack Settings")]
+    bool attack = false;
+    float timeBetweenAttack, timeSinceAttack;
+    [SerializeField] Transform SideAttackTransform, UpAttackTransform, DownAttackTransform;
+    [SerializeField] Vector2 SideAttackArea, UpAttackArea, DownAttackArea;
+    [SerializeField] LayerMask attackableLayer;
+    [SerializeField] float damage;
+
     PlayerStateList pState;
     private Rigidbody2D rb;
-    private float xAxis;
+    private float xAxis, yAxis;
     private float gravity;
     Animator anim;
     private bool canDash = true;
     private bool dashed;
 
-    public static PlayerMovement Instance;
+    public static PlayerController Instance;
 
     private void Awake()
     {
@@ -52,9 +60,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    bool attack = false;
-    float timeBetweenAttack, timeSinceAttack;
-
     private void Start()
     {
         pState = GetComponent<PlayerStateList>();
@@ -64,6 +69,31 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
 
         gravity = rb.gravityScale;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(SideAttackTransform.position, SideAttackArea);
+        Gizmos.DrawWireCube(UpAttackTransform.position, UpAttackArea);
+        Gizmos.DrawWireCube(DownAttackTransform.position, DownAttackArea);
+    }
+
+    private void Hit(Transform _attackTransform, Vector2 _attackArea)
+    {
+        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
+
+        if (objectsToHit.Length > 0)
+        {
+            Debug.Log("Hit");
+        }
+        for (int i = 0; i < objectsToHit.Length; i++)
+        {
+            if (objectsToHit[i].GetComponent<RegularEnemy>() != null)
+            {
+                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage);
+            }
+        }
     }
 
     void Update()
@@ -87,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
     void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
+        yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetMouseButton(0);
     }
 
@@ -133,6 +164,28 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
             facingDirection = 1;
+        }
+    }
+    void Attack()
+    {
+        timeSinceAttack += Time.deltaTime;
+        if (attack && timeSinceAttack >= timeBetweenAttack)
+        {
+            timeSinceAttack = 0;
+            anim.SetTrigger("Attacking");
+
+            if (yAxis == 0 || yAxis < 0 && Grounded())
+            {
+                Hit(SideAttackTransform, SideAttackArea);
+            }
+            else if (yAxis > 0)
+            {
+                Hit(UpAttackTransform, UpAttackArea);
+            }
+            else if (yAxis < 0 && !Grounded())
+            {
+                Hit(DownAttackTransform, DownAttackArea);
+            }
         }
     }
 
@@ -194,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            jumpBufferCounter--;
+            jumpBufferCounter = jumpBufferCounter - Time.deltaTime * 10;
         }
     }
 }
