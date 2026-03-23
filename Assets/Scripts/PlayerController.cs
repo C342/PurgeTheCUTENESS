@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         {
             if (objectsToHit[i].GetComponent<RegularEnemy>() != null)
             {
-                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage);
+                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, 100);
             }
         }
     }

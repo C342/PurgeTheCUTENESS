@@ -1256,6 +1256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  recoilLength: 1
+  recoilFactor: 50
+  isRecoiling: 0
   player: {fileID: 552759886}
   speed: 15
 --- !u!4 &1540760357 stripped
