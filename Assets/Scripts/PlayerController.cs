@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,6 +38,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector2 SideAttackArea, UpAttackArea, DownAttackArea;
     [SerializeField] LayerMask attackableLayer;
     [SerializeField] float damage;
+
+    [Header("Recoil Settings")]
+    [SerializeField] int recoilXSteps = 5;
+    [SerializeField] int recoilYSteps = 5;
+    [SerializeField] float recoilYSpeed = 100;
+    [SerializeField] float recoilXSpeed = 100;
+    int stepsXRecoiled, stepsYRecoiled;
 
     PlayerStateList pState;
     private Rigidbody2D rb;
@@ -79,21 +87,64 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireCube(DownAttackTransform.position, DownAttackArea);
     }
 
-    private void Hit(Transform _attackTransform, Vector2 _attackArea)
+    void Recoil()
+    {
+        if (pState.recoilingX)
+        {
+            if (pState.lookingRight)
+            {
+                rb.linearVelocity = new Vector2(-recoilXSpeed, 0);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(recoilXSpeed, 0);
+            }
+        }
+
+        if (pState.recoilingY)
+        {
+            rb.gravityScale = 0;
+            if (yAxis < 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, recoilYSpeed);
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, -recoilYSpeed);
+            }
+        }
+        else
+        {
+            rb.gravityScale = gravity;
+        }
+    }
+
+    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
 
         if (objectsToHit.Length > 0)
         {
-            Debug.Log("Hit");
+            _recoilDir = true;
         }
         for (int i = 0; i < objectsToHit.Length; i++)
         {
             if (objectsToHit[i].GetComponent<RegularEnemy>() != null)
             {
-                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, 100);
+                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
             }
         }
+    }
+
+    void StopRecoilX()
+    {
+        stepsXRecoiled = 0;
+        pState.recoilingX = false;
+    }
+    void StopRecoilY()
+    {
+        stepsYRecoiled = 0;
+        pState.recoilingY = false;
     }
 
     void Update()
@@ -160,11 +211,13 @@ public class PlayerController : MonoBehaviour
         {
             transform.localScale = new Vector2(-1, transform.localScale.y);
             facingDirection = -1;
+            pState.lookingRight = false;
         }
         else if (xAxis > 0)
         {
             transform.localScale = new Vector2(1, transform.localScale.y);
             facingDirection = 1;
+            pState.lookingRight = true;
         }
     }
     void Attack()
@@ -177,15 +230,15 @@ public class PlayerController : MonoBehaviour
 
             if (yAxis == 0 || yAxis < 0 && Grounded())
             {
-                Hit(SideAttackTransform, SideAttackArea);
+                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
             }
             else if (yAxis > 0)
             {
-                Hit(UpAttackTransform, UpAttackArea);
+                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
             }
             else if (yAxis < 0 && !Grounded())
             {
-                Hit(DownAttackTransform, DownAttackArea);
+                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
             }
         }
     }
