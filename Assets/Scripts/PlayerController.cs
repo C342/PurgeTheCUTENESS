@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
         Flip();
         Move();
         Jump();
+        Attack();
         StartDash();
     }
 
