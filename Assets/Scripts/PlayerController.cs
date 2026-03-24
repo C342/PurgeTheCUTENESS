@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.AI;
-
 public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings")]
@@ -117,6 +115,39 @@ public class PlayerController : MonoBehaviour
         {
             rb.gravityScale = gravity;
         }
+
+        if (pState.recoilingX && stepsXRecoiled < recoilXSteps)
+        {
+            stepsXRecoiled++;
+        }
+        else
+        {
+            StopRecoilX();
+        }
+        if (pState.recoilingY && stepsYRecoiled < recoilYSteps)
+        {
+
+        }
+        else
+        {
+            StopRecoilX();
+        }
+
+        if (Grounded())
+        {
+            StopRecoilY();
+        }
+    }
+
+    void StopRecoilX()
+    {
+        stepsXRecoiled = 0;
+        pState.recoilingX = false;
+    }
+    void StopRecoilY()
+    {
+        stepsYRecoiled = 0;
+        pState.recoilingY = false;
     }
 
     private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
@@ -134,17 +165,6 @@ public class PlayerController : MonoBehaviour
                 objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
             }
         }
-    }
-
-    void StopRecoilX()
-    {
-        stepsXRecoiled = 0;
-        pState.recoilingX = false;
-    }
-    void StopRecoilY()
-    {
-        stepsYRecoiled = 0;
-        pState.recoilingY = false;
     }
 
     void Update()

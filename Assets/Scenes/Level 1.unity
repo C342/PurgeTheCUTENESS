@@ -540,6 +540,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damage: 100
+  recoilXSteps: 5
+  recoilYSteps: 5
+  recoilYSpeed: 100
+  recoilXSpeed: 100
 --- !u!212 &552759887
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -701,6 +705,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumping: 0
   dashing: 0
+  recoilingX: 0
+  recoilingY: 0
+  lookingRight: 0
 --- !u!95 &552759893
 Animator:
   serializedVersion: 7
