@@ -44,7 +44,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float recoilXSpeed = 100;
     int stepsXRecoiled, stepsYRecoiled;
 
-    PlayerStateList pState;
+    [Header("Health Settings")]
+    public int health;
+    public int maxHealth;
+
+    [HideInInspector] public PlayerStateList pState;
     private Rigidbody2D rb;
     private float xAxis, yAxis;
     private float gravity;
@@ -64,6 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
+        health = maxHealth;
     }
 
     private void Start()
@@ -150,6 +155,24 @@ public class PlayerController : MonoBehaviour
         pState.recoilingY = false;
     }
 
+    public void TakeDamage(float _damage)
+    {
+        health -= Mathf.RoundToInt(_damage);
+        StartCoroutine(StopTakingDamage());
+    }
+    IEnumerator StopTakingDamage()
+    {
+        pState.invincible = true;
+        ClampHealth();
+        yield return new WaitForSeconds(1f);
+        pState.invincible = false;
+    }
+
+    void ClampHealth()
+    {
+        health = Mathf.Clamp(health, 0, maxHealth);
+    }
+
     private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
@@ -160,9 +183,9 @@ public class PlayerController : MonoBehaviour
         }
         for (int i = 0; i < objectsToHit.Length; i++)
         {
-            if (objectsToHit[i].GetComponent<RegularEnemy>() != null)
+            if (objectsToHit[i].GetComponent<BaseEnemyClass>() != null)
             {
-                objectsToHit[i].GetComponent<RegularEnemy>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
+                objectsToHit[i].GetComponent<BaseEnemyClass>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
             }
         }
     }

@@ -544,6 +544,9 @@ MonoBehaviour:
   recoilYSteps: 5
   recoilYSpeed: 100
   recoilXSpeed: 100
+  health: 100
+  maxHealth: 100
+  pState: {fileID: 0}
 --- !u!212 &552759887
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -708,6 +711,7 @@ MonoBehaviour:
   recoilingX: 0
   recoilingY: 0
   lookingRight: 0
+  invincible: 0
 --- !u!95 &552759893
 Animator:
   serializedVersion: 7
@@ -1097,11 +1101,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1467178685}
   - component: {fileID: 1467178684}
-  - component: {fileID: 1467178688}
   - component: {fileID: 1467178687}
   - component: {fileID: 1467178686}
+  - component: {fileID: 1467178689}
+  - component: {fileID: 1467178690}
   m_Layer: 7
-  m_Name: RegularEnemy
+  m_Name: Crawler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,7 +1255,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1467178688
+--- !u!61 &1467178689
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467178683}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.00000023841858, y: 0.002301693}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.944757, y: 0.9401541}
+  m_EdgeRadius: 0
+--- !u!114 &1467178690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1263,11 +1314,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  recoilLength: 1
-  recoilFactor: 50
+  recoilLength: 50
+  recoilFactor: 1
   isRecoiling: 0
   player: {fileID: 552759886}
   speed: 15
+  damage: 0
 --- !u!4 &1540760357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 659112955672894322, guid: 41668eb530583814bb8807992a590e40, type: 3}
