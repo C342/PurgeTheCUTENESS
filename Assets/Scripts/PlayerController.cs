@@ -45,10 +45,13 @@ public class PlayerController : MonoBehaviour
     int stepsXRecoiled, stepsYRecoiled;
 
     [Header("Health Settings")]
+    public int health;
     public int maxHealth;
+    [SerializeField] float hitFlashSpeed;
 
     [HideInInspector] public PlayerStateList pState;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     private float xAxis, yAxis;
     private float gravity;
     Animator anim;
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        //Health = maxHealth;
+        health = maxHealth;
     }
 
     private void Start()
@@ -77,6 +80,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         anim = GetComponent<Animator>();
+
+        sr = GetComponent<SpriteRenderer>();
 
         gravity = rb.gravityScale;
     }
@@ -154,9 +159,16 @@ public class PlayerController : MonoBehaviour
         pState.recoilingY = false;
     }
 
+    void FlashWhilstInvincible()
+    {
+        sr.material.color = pState.invincible ? 
+            Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : 
+            Color.white;
+    }
+
     public void TakeDamage(float _damage)
     {
-        //Health -= Mathf.RoundToInt(_damage);
+        health -= Mathf.RoundToInt(_damage);
         StartCoroutine(StopTakingDamage());
     }
     IEnumerator StopTakingDamage()
@@ -169,12 +181,12 @@ public class PlayerController : MonoBehaviour
 
     //public int Health()
     //{
-    //    get { return Health; }
+    //    get { return health; }
     //    set
     //    {
-    //        if (Health != value)
+    //        if (health != value)
     //        {
-    //            Health = Mathf.Clamp(value, 0, maxHealth);
+    //            health = Mathf.Clamp(value, 0, maxHealth);
     //        }
     //    }
     //}
@@ -207,6 +219,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         Attack();
         StartDash();
+        FlashWhilstInvincible();
     }
 
     void CameraTransform(Transform playerCamera)
