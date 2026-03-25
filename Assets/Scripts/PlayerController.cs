@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
     int stepsXRecoiled, stepsYRecoiled;
 
     [Header("Health Settings")]
-    public int health;
     public int maxHealth;
 
     [HideInInspector] public PlayerStateList pState;
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        health = maxHealth;
+        //Health = maxHealth;
     }
 
     private void Start()
@@ -157,21 +156,28 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        health -= Mathf.RoundToInt(_damage);
+        //Health -= Mathf.RoundToInt(_damage);
         StartCoroutine(StopTakingDamage());
     }
     IEnumerator StopTakingDamage()
     {
         pState.invincible = true;
-        ClampHealth();
         yield return new WaitForSeconds(1f);
         pState.invincible = false;
+        // i-frame implementation
     }
 
-    void ClampHealth()
-    {
-        health = Mathf.Clamp(health, 0, maxHealth);
-    }
+    //public int Health()
+    //{
+    //    get { return Health; }
+    //    set
+    //    {
+    //        if (Health != value)
+    //        {
+    //            Health = Mathf.Clamp(value, 0, maxHealth);
+    //        }
+    //    }
+    //}
 
     private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
@@ -209,11 +215,17 @@ public class PlayerController : MonoBehaviour
         child.SetParent(playerCamera, false);
     }
 
+    private void FixedUpdate()
+    {
+        if(pState.dashing) return;
+        Recoil();
+    }
+
     void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
-        attack = Input.GetMouseButton(0);
+        attack = Input.GetButtonDown("Attack");
     }
 
     private void Move()
