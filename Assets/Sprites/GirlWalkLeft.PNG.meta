@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 58e8bf4fc22927f42bbcbcf7c0949bf5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2113447339950291325
+    second: GirlWalkLeft_0
+  - first:
+      213: -2856894388429063657
+    second: GirlWalkLeft_1
+  - first:
+      213: 2668966814957063892
+    second: GirlWalkLeft_2
+  - first:
+      213: -6728435272122054316
+    second: GirlWalkLeft_3
+  - first:
+      213: 1447510703021280935
+    second: GirlWalkLeft_4
+  - first:
+      213: -6155981605051119988
+    second: GirlWalkLeft_5
+  - first:
+      213: -6380925759679132888
+    second: GirlWalkLeft_6
+  - first:
+      213: -6821617252789908036
+    second: GirlWalkLeft_7
+  - first:
+      213: 6272242716638723337
+    second: GirlWalkLeft_8
+  - first:
+      213: -5592603736290136933
+    second: GirlWalkLeft_9
+  - first:
+      213: -2352304485213164353
+    second: GirlWalkLeft_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GirlWalkLeft_0
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 134
+        width: 292
+        height: 747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386c4c287d68ba2e0800000000000000
+      internalID: -2113447339950291325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_1
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 129
+        width: 292
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71af0e0b0b54a58d0800000000000000
+      internalID: -2856894388429063657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_2
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 129
+        width: 312
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de42da6d231a0520800000000000000
+      internalID: 2668966814957063892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_3
+      rect:
+        serializedVersion: 2
+        x: 3354
+        y: 129
+        width: 292
+        height: 717
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459c4fec4cbcf92a0800000000000000
+      internalID: -6728435272122054316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_4
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 129
+        width: 292
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aec82ea057961410800000000000000
+      internalID: 1447510703021280935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_5
+      rect:
+        serializedVersion: 2
+        x: 5354
+        y: 129
+        width: 267
+        height: 742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c86c613985f819aa0800000000000000
+      internalID: -6155981605051119988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_6
+      rect:
+        serializedVersion: 2
+        x: 6354
+        y: 129
+        width: 272
+        height: 737
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b8f2444d56277a0800000000000000
+      internalID: -6380925759679132888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_7
+      rect:
+        serializedVersion: 2
+        x: 7354
+        y: 129
+        width: 282
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbd08c5404fb451a0800000000000000
+      internalID: -6821617252789908036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_8
+      rect:
+        serializedVersion: 2
+        x: 8354
+        y: 129
+        width: 272
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d384ed48b7b0750800000000000000
+      internalID: 6272242716638723337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_9
+      rect:
+        serializedVersion: 2
+        x: 9354
+        y: 129
+        width: 292
+        height: 762
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9c67e068841362b0800000000000000
+      internalID: -5592603736290136933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GirlWalkLeft_10
+      rect:
+        serializedVersion: 2
+        x: 10354
+        y: 129
+        width: 292
+        height: 757
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcaf43a88fea5fd0800000000000000
+      internalID: -2352304485213164353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GirlWalkLeft_0: -2113447339950291325
+      GirlWalkLeft_1: -2856894388429063657
+      GirlWalkLeft_10: -2352304485213164353
+      GirlWalkLeft_2: 2668966814957063892
+      GirlWalkLeft_3: -6728435272122054316
+      GirlWalkLeft_4: 1447510703021280935
+      GirlWalkLeft_5: -6155981605051119988
+      GirlWalkLeft_6: -6380925759679132888
+      GirlWalkLeft_7: -6821617252789908036
+      GirlWalkLeft_8: 6272242716638723337
+      GirlWalkLeft_9: -5592603736290136933
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

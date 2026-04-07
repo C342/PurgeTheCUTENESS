@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider2D other)
+    private void OnColliderEnter(Collider2D other)
     {
         if (other.gameObject.name == "Player")
         {

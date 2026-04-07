@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimeCounter = 0;
     [SerializeField] private float coyoteTime;
     private int facingDirection = 1;
+    private Vector3 originalScale;
 
     [Header("Ground Check Settings")]
 
@@ -84,6 +85,8 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         gravity = rb.gravityScale;
+
+        originalScale = transform.localScale;
     }
 
     private void OnDrawGizmos()
@@ -139,7 +142,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            StopRecoilX();
+            StopRecoilY();
         }
 
         if (Grounded())
@@ -244,6 +247,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rb.linearVelocity = new Vector2(Speed * xAxis, rb.linearVelocity.y);
+        anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded());
     }
 
     void StartDash()
@@ -277,13 +281,13 @@ public class PlayerController : MonoBehaviour
     {
         if (xAxis < 0)
         {
-            transform.localScale = new Vector2(-1, transform.localScale.y);
+            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
             facingDirection = -1;
             pState.lookingRight = false;
         }
         else if (xAxis > 0)
         {
-            transform.localScale = new Vector2(1, transform.localScale.y);
+            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
             facingDirection = 1;
             pState.lookingRight = true;
         }
@@ -349,6 +353,8 @@ public class PlayerController : MonoBehaviour
 
             pState.jumping = true;
         }
+
+        anim.SetBool("Jumping", !Grounded());
     }
 
     void UpdateJumpVariable()
