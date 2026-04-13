@@ -4,23 +4,21 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
     [SerializeField] private Slider healthBar;
     [SerializeField] private TextMeshProUGUI barText;
-
-    public int maxHealth;
-    public int currentHealth;
+    [SerializeField] private PlayerController player;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        healthBar.maxValue = player.maxHealth;
     }
 
     void Update()
     {
-        barText.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+        int currentHealth = player.health;
+        int maxHealth = player.maxHealth;
 
         healthBar.value = currentHealth;
-        healthBar.maxValue = maxHealth;
+        barText.text = currentHealth + "/" + maxHealth;
     }
 }

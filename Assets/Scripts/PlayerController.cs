@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
     int stepsXRecoiled, stepsYRecoiled;
 
     [Header("Health Settings")]
-    public int health;
-    public int maxHealth;
+    public int health = 100;
+    public int maxHealth = 100;
     [SerializeField] float hitFlashSpeed;
 
     [HideInInspector] public PlayerStateList pState;
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        health = maxHealth;
+        health -= (int)damage;
     }
 
     private void Start()
@@ -182,17 +182,17 @@ public class PlayerController : MonoBehaviour
         // i-frame implementation
     }
 
-    //public int Health()
-    //{
-    //    get { return health; }
-    //    set
-    //    {
-    //        if (health != value)
-    //        {
-    //            health = Mathf.Clamp(value, 0, maxHealth);
-    //        }
-    //    }
-    //}
+    public int Health
+{
+    get { return health; }
+    set
+    {
+        if (health != value)
+        {
+            health = Mathf.Clamp(value, 0, maxHealth);
+        }
+    }
+}
 
     private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
