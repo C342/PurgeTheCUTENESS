@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 909170025b6dcd84690a1af55d505730
+guid: cca9300a302a755408bbee4b5b307a02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6015969424367391006
-    second: Platform normal (no blood) by Kacperjakubik #pixilart #pixelart #pixilartapp_0
+      213: 1019295858718826416
+    second: Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_0
+  - first:
+      213: 5255505608868566676
+    second: Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,6 +100,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,24 +126,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -139,23 +142,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Platform normal (no blood) by Kacperjakubik #pixilart #pixelart #pixilartapp_0
+      name: Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 211
-        width: 1500
-        height: 527
+        x: 202
+        y: 62
+        width: 730
+        height: 1444
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e11970741540d7350800000000000000
-      internalID: 6015969424367391006
+      spriteID: 0bf56fbde24452e00800000000000000
+      internalID: 1019295858718826416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_1
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1133
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4961fa3a18e4fe840800000000000000
+      internalID: 5255505608868566676
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bd3ed63dec1e8984eaa0578cc3a4634f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Platform normal (no blood) by Kacperjakubik #pixilart #pixelart #pixilartapp_0: 6015969424367391006
-      Platform1_0: -119214149
+      Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_0: 1019295858718826416
+      Broken pillar 1 by Kacperjakubik #pixilart #pixelart #pixilartapp_1: 5255505608868566676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

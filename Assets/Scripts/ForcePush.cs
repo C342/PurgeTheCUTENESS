@@ -23,12 +23,12 @@ public class ForcePush : MonoBehaviour
     {
         Collider2D colliders = Physics2D.OverlapCircle(transform.position, pushRadius);
 
-        foreach (Collider2D pushedObject in colliders)
-        {
-            if (pushedObject.CompareTag("Push"))
-            {
+        //foreach (Collider2D pushedObject in colliders)
+        //{
+        //    if (pushedObject.CompareTag("Push"))
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
