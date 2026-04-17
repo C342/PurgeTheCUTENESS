@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 845888651640375456}
   - component: {fileID: 5590043989126046120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BloodyFloor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2675634337618427189}
   - component: {fileID: 3466519743725188486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BloodyBricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 882812795061183151}
   - component: {fileID: 1899730498576245241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BloodyBricks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
