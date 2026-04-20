@@ -298,7 +298,7 @@ public class PlayerController : MonoBehaviour
         if (attack && timeSinceAttack >= timeBetweenAttack)
         {
             timeSinceAttack = 0;
-            anim.SetBool("Attacking", attack);
+            //anim.SetBool("Attacking", );
 
             if (yAxis == 0 || yAxis < 0 && Grounded())
             {
