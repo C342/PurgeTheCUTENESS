@@ -17,6 +17,7 @@ public class BaseEnemyClass : MonoBehaviour
     [SerializeField] protected float damage;
 
     protected Rigidbody2D rb;
+    protected Animator anim;
 
     public virtual void Start()
     {
@@ -66,6 +67,7 @@ public class BaseEnemyClass : MonoBehaviour
 
     public virtual void Awake()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+        anim = rb.GetComponent<Animator>();
     }
 }
