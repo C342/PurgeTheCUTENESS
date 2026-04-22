@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpBufferFrames;
     private float coyoteTimeCounter = 0;
     [SerializeField] private float coyoteTime;
+    [SerializeField] private float attackMoveMultiplier = 0.4f;
     private int facingDirection = 1;
     private Vector3 originalScale;
 
@@ -32,7 +33,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Settings")]
     bool attack = false;
-    float timeBetweenAttack, timeSinceAttack;
+    float timeSinceAttack = 0;
+    [SerializeField] float timeBetweenAttack = 0.4f;
     [SerializeField] Transform SideAttackTransform, UpAttackTransform, DownAttackTransform;
     [SerializeField] Vector2 SideAttackArea, UpAttackArea, DownAttackArea;
     [SerializeField] LayerMask attackableLayer;
@@ -60,7 +62,7 @@ public class PlayerController : MonoBehaviour
     private bool dashed;
 
     public static PlayerController Instance;
-
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -71,7 +73,6 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        health -= (int)damage;
     }
 
     private void Start()
@@ -212,18 +213,24 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {
-        GetInputs();
-        UpdateJumpVariable();
+{
+    GetInputs();
+    UpdateJumpVariable();
 
-        if (pState.dashing) return;
-        Flip();
-        Move();
-        Jump();
-        Attack();
-        StartDash();
-        FlashWhilstInvincible();
-    }
+    if (pState.dashing) return;
+
+    Attack();
+    Flip();
+    Move();
+    Jump();
+    StartDash();
+    FlashWhilstInvincible();
+}
+
+    public void EndAttack()
+    {
+        pState.attacking = false;
+    }   
 
     void CameraTransform(Transform playerCamera)
     {
@@ -233,7 +240,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(pState.dashing) return;
         Recoil();
     }
 
@@ -245,10 +251,18 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Move()
+{
+    float currentSpeed = Speed;
+
+    if (pState.attacking)
     {
-        rb.linearVelocity = new Vector2(Speed * xAxis, rb.linearVelocity.y);
-        anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded());
+        currentSpeed *= attackMoveMultiplier; // 🔥 slow movement
     }
+
+    rb.linearVelocity = new Vector2(currentSpeed * xAxis, rb.linearVelocity.y);
+
+    anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded());
+}
 
     void StartDash()
     {
@@ -293,27 +307,64 @@ public class PlayerController : MonoBehaviour
         }
     }
     void Attack()
-    {
-        timeSinceAttack += Time.deltaTime;
-        if (attack && timeSinceAttack >= timeBetweenAttack)
-        {
-            timeSinceAttack = 0;
-            //anim.SetBool("Attacking", );
+{
+    
+    timeSinceAttack += Time.deltaTime;
 
-            if (yAxis == 0 || yAxis < 0 && Grounded())
-            {
-                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
-            }
-            else if (yAxis > 0)
-            {
-                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
-            }
-            else if (yAxis < 0 && !Grounded())
-            {
-                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
-            }
+    if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
+    {
+        pState.attacking = true;
+        anim.SetTrigger("Attack");
+
+        StartCoroutine(AttackRoutine());
+    }
+
+    if (attack && timeSinceAttack >= timeBetweenAttack)
+    {
+        timeSinceAttack = 0;
+
+        anim.SetTrigger("Attack");
+
+        if (yAxis == 0 || yAxis < 0 && Grounded())
+        {
+            Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+        }
+        else if (yAxis > 0)
+        {
+            Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+        }
+        else if (yAxis < 0 && !Grounded())
+        {
+            Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
         }
     }
+}
+
+IEnumerator AttackRoutine()
+{
+    pState.attacking = true;
+
+    anim.SetTrigger("Attack");
+
+    yield return new WaitForSeconds(0.1f);
+
+    if (yAxis == 0 || yAxis < 0 && Grounded())
+    {
+        Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+    }
+    else if (yAxis > 0)
+    {
+        Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+    }
+    else if (yAxis < 0 && !Grounded())
+    {
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
+    }
+
+    yield return new WaitForSeconds(0.2f);
+
+    pState.attacking = false;
+}
 
     public bool Grounded()
     {
