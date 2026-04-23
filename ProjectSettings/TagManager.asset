@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Cleanup
+  - Music
   layers:
   - Default
   - TransparentFX

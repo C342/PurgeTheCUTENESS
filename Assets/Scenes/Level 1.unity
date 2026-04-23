@@ -1690,11 +1690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1c310f91d2a2049805197706166562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &552759888 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5102224455580303096, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
-  m_PrefabInstance: {fileID: 9108741537058476958}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574708182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1788,6 @@ GameObject:
   - component: {fileID: 606852756}
   - component: {fileID: 606852760}
   - component: {fileID: 606852759}
-  - component: {fileID: 606852757}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1816,20 +1810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &606852757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606852755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1cc09e556badb46b2095c7caa4d8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 552759888}
-  parallaxSpeed: 0.5
 --- !u!23 &606852759
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6757,11 +6737,19 @@ PrefabInstance:
       objectReference: {fileID: 519420032}
     - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
       propertyPath: recoilXSpeed
-      value: 35
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
+      propertyPath: recoilXSteps
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
       propertyPath: recoilYSpeed
-      value: 35
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
+      propertyPath: recoilYSteps
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5085757109115846658, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
       propertyPath: m_LocalPosition.y
