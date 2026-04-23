@@ -19,6 +19,11 @@ public class BaseEnemyClass : MonoBehaviour
     protected Rigidbody2D rb;
     protected Animator anim;
 
+
+    private Vector3 originalScale;
+    private int facingDirection = 1;
+    private float xAxis, yAxis;
+
     public virtual void Start()
     {
 
@@ -26,6 +31,8 @@ public class BaseEnemyClass : MonoBehaviour
 
     protected private virtual void Update()
     {
+        Flip();
+
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -50,6 +57,20 @@ public class BaseEnemyClass : MonoBehaviour
         if (!isRecoiling)
         {
             rb.AddForce(-_hitForce * recoilFactor * _hitDirection);
+        }
+    }
+
+    void Flip()
+    {
+        if (xAxis < 0)
+        {
+            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
+            facingDirection = -1;
+        }
+        else if (xAxis > 0)
+        {
+            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
+            facingDirection = 1;
         }
     }
 

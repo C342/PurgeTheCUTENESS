@@ -6312,11 +6312,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.65
+      value: 31.03
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.49
+      value: -10.51
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6745,7 +6745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
       propertyPath: dashSpeed
-      value: 40
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
+      propertyPath: dashCooldown
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
       propertyPath: playerCamera
