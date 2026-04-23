@@ -256,7 +256,7 @@ public class PlayerController : MonoBehaviour
 
     if (pState.attacking)
     {
-        currentSpeed *= attackMoveMultiplier; // 🔥 slow movement
+        currentSpeed *= attackMoveMultiplier;
     }
 
     rb.linearVelocity = new Vector2(currentSpeed * xAxis, rb.linearVelocity.y);
