@@ -3,15 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class PreserveMusic : MonoBehaviour
 {
+    GameObject BGM;
+
     void Awake()
     {
-        musicPlayer = GameObject.Find("BGM");
+        BGM = GameObject.Find("BGM");
 
-        if (musicPlayer == null)
+        if (BGM == null)
         {
-            musicPlayer = this.gameObject;
-            musicPlayer.name = "BGM";
-            DontDestroyOnLoad(musicPlayer);
+            BGM = this.gameObject;
+            gameObject.name = "BGM";
+            DontDestroyOnLoad(BGM);
         }
         else
         {
