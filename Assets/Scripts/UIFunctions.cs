@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ButtonFunction : MonoBehaviour
+public class UIFunctions : MonoBehaviour
 {
     public void StartButton()
     {
@@ -13,13 +14,8 @@ public class ButtonFunction : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    void Start()
+    public void ReturnButton()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
