@@ -221,7 +221,7 @@ Animator:
   m_GameObject: {fileID: 5785859230239301114}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d72a798db0f464438b0b1bc47b20ecc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 026eea694cf04ca4ea14e9bfe2d4337a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
-  recoilLength: 50
+  recoilLength: 75
   recoilFactor: 1
   isRecoiling: 0
   player: {fileID: 0}

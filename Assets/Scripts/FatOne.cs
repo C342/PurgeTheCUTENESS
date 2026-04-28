@@ -31,6 +31,8 @@ public class FatOne : BaseEnemyClass
                     new Vector2(PlayerController.Instance.transform.position.x, transform.position.y),
                     speed * Time.deltaTime);
             }
+
+            //anim.SetBool("Walking"), Mathf.Abs(rb.linearVelocity.x);
         }
     }
 
