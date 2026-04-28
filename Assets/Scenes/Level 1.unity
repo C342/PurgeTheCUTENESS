@@ -604,6 +604,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1277703465}
+  - {fileID: 385650134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1144,12 +1145,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385650131}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -539.99994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 131192805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &414956434 stripped
 Transform:
@@ -1602,7 +1603,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.66, y: -5.05, z: -39.574825}
+  m_LocalPosition: {x: -9.66, y: -5.0499997, z: -43.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1621,7 +1622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpeed: 0.01
-  offset: {x: 0, y: 5, z: -10}
+  shakeSpeed: 0.01
+  magnitude: 0.01
 --- !u!1001 &551484086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1630,17 +1632,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60315369803168438, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 552759886}
     - target: {fileID: 1285930931249617784, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_Name
       value: CrawlerEnemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 269.21
+      value: 269.48
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.61
+      value: 8.29
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1785,17 +1791,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60315369803168438, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 552759886}
     - target: {fileID: 1285930931249617784, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_Name
       value: CrawlerEnemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 347.7
+      value: 348.01
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.1
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2308,11 +2318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452790125751197165, guid: f0a90d026d4eb584692e0e934d794ad7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 345.39
+      value: 336.6
       objectReference: {fileID: 0}
     - target: {fileID: 6452790125751197165, guid: f0a90d026d4eb584692e0e934d794ad7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -43.09
+      value: -43.5
       objectReference: {fileID: 0}
     - target: {fileID: 6452790125751197165, guid: f0a90d026d4eb584692e0e934d794ad7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3279,14 +3289,14 @@ RectTransform:
   m_GameObject: {fileID: 1111275776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.04844}
-  m_LocalScale: {x: 0.76517683, y: 0.76517683, z: 0.76517683}
+  m_LocalScale: {x: 0.8057312, y: 0.28097066, z: 0.8057312}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1277703465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.4, y: -28.3}
+  m_AnchoredPosition: {x: -4.2, y: -5.3}
   m_SizeDelta: {x: 80.6446, y: 217.7182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111275778
@@ -3309,7 +3319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 44c14229c6205a14ca229c0c1e9cbc4d, type: 3}
+  m_Sprite: {fileID: -7574155311792888304, guid: ec814ae66c61b0f45ac9823f1a3efc5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3822,7 +3832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -596.3, y: 489.9}
+  m_AnchoredPosition: {x: -596.3, y: 455}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1277703466
@@ -4534,17 +4544,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60315369803168438, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 552759886}
     - target: {fileID: 1285930931249617784, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_Name
       value: CrawlerEnemy (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.8
+      value: 107.77
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.7
+      value: -10.41
       objectReference: {fileID: 0}
     - target: {fileID: 4705245601102881001, guid: 1219d3dabf93e9f4d91d9d6d7be2dc88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5442,8 +5456,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6821,7 +6835,6 @@ SceneRoots:
   - {fileID: 606852756}
   - {fileID: 9108741537058476958}
   - {fileID: 131192805}
-  - {fileID: 385650134}
   - {fileID: 1546002329}
   - {fileID: 551484086}
   - {fileID: 599167332}

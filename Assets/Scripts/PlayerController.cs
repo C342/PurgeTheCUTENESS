@@ -261,7 +261,7 @@ public class PlayerController : MonoBehaviour
 
     rb.linearVelocity = new Vector2(currentSpeed * xAxis, rb.linearVelocity.y);
 
-    anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded());
+    anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded() && !pState.attacking);
 }
 
     void StartDash()
@@ -309,42 +309,21 @@ public class PlayerController : MonoBehaviour
     void Attack()
 {
     
-    timeSinceAttack += Time.deltaTime;
-
-    if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
     {
-        pState.attacking = true;
-        anim.SetTrigger("Attack");
+        timeSinceAttack += Time.deltaTime;
 
-        StartCoroutine(AttackRoutine());
-    }
-
-    if (attack && timeSinceAttack >= timeBetweenAttack)
-    {
-        timeSinceAttack = 0;
-
-        anim.SetTrigger("Attack");
-
-        if (yAxis == 0 || yAxis < 0 && Grounded())
+        if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
         {
-            Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
-        }
-        else if (yAxis > 0)
-        {
-            Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
-        }
-        else if (yAxis < 0 && !Grounded())
-        {
-            Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
+            timeSinceAttack = 0;
+            StartCoroutine(AttackRoutine());
         }
     }
 }
 
 IEnumerator AttackRoutine()
 {
-    pState.attacking = true;
-
     anim.SetTrigger("Attack");
+    pState.attacking = true;
 
     yield return new WaitForSeconds(0.1f);
 

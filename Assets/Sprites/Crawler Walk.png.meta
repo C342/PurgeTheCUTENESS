@@ -1,0 +1,764 @@
+fileFormatVersion: 2
+guid: 37f97e14f3abb094c8aaa3ee8cc39cd5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6270522133218398321
+    second: Walk-ezgif.com-effects_0
+  - first:
+      213: 79561146367492359
+    second: Walk-ezgif.com-effects_1
+  - first:
+      213: -8335581031422395942
+    second: Walk-ezgif.com-effects_2
+  - first:
+      213: 9085697674620634439
+    second: Walk-ezgif.com-effects_3
+  - first:
+      213: 2375112263899575794
+    second: Walk-ezgif.com-effects_4
+  - first:
+      213: 8209809156009087446
+    second: Walk-ezgif.com-effects_5
+  - first:
+      213: 1976567496678879449
+    second: Walk-ezgif.com-effects_6
+  - first:
+      213: 2970961615007763177
+    second: Walk-ezgif.com-effects_7
+  - first:
+      213: -3336763811053562617
+    second: Walk-ezgif.com-effects_8
+  - first:
+      213: -667467549469694336
+    second: Walk-ezgif.com-effects_9
+  - first:
+      213: 6662314979597115669
+    second: Walk-ezgif.com-effects_10
+  - first:
+      213: 2824451158292636211
+    second: Walk-ezgif.com-effects_11
+  - first:
+      213: 1325473654408332442
+    second: Walk-ezgif.com-effects_12
+  - first:
+      213: -434139613339761940
+    second: Walk-ezgif.com-effects_13
+  - first:
+      213: -1442920504611114453
+    second: Walk-ezgif.com-effects_14
+  - first:
+      213: -3806337574855388536
+    second: Walk-ezgif.com-effects_15
+  - first:
+      213: 1236663088375397766
+    second: Walk-ezgif.com-effects_16
+  - first:
+      213: 5539419877332775466
+    second: Walk-ezgif.com-effects_17
+  - first:
+      213: 8605198886568861670
+    second: Walk-ezgif.com-effects_18
+  - first:
+      213: -4606021352286041439
+    second: Walk-ezgif.com-effects_19
+  - first:
+      213: 3213571795086734516
+    second: Walk-ezgif.com-effects_20
+  - first:
+      213: 3976856131458361636
+    second: Walk-ezgif.com-effects_21
+  - first:
+      213: -6286545009556623553
+    second: Walk-ezgif.com-effects_22
+  - first:
+      213: -2666296921402141278
+    second: Walk-ezgif.com-effects_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_0
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 2241
+        width: 983
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17015b258ae550750800000000000000
+      internalID: 6270522133218398321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_1
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 2231
+        width: 1033
+        height: 433
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701482be078aa1100800000000000000
+      internalID: 79561146367492359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_2
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 2231
+        width: 1093
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad975993731125c80800000000000000
+      internalID: -8335581031422395942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_3
+      rect:
+        serializedVersion: 2
+        x: 4386
+        y: 2231
+        width: 1093
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7450b50a5e1e61e70800000000000000
+      internalID: 9085697674620634439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_4
+      rect:
+        serializedVersion: 2
+        x: 5811
+        y: 2226
+        width: 1098
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f57867250816f020800000000000000
+      internalID: 2375112263899575794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1671
+        width: 1133
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1dba11ee91fe170800000000000000
+      internalID: 8209809156009087446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_6
+      rect:
+        serializedVersion: 2
+        x: 1636
+        y: 1676
+        width: 1098
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0b02a7aad2e6b10800000000000000
+      internalID: 1976567496678879449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_7
+      rect:
+        serializedVersion: 2
+        x: 3026
+        y: 1681
+        width: 1088
+        height: 433
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eacbd719d9fa3920800000000000000
+      internalID: 2970961615007763177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_8
+      rect:
+        serializedVersion: 2
+        x: 4436
+        y: 1676
+        width: 1098
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70516c62efe61b1d0800000000000000
+      internalID: -3336763811053562617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_9
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 1676
+        width: 1078
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08622c6dccdacb6f0800000000000000
+      internalID: -667467549469694336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1126
+        width: 1043
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51166acec2c457c50800000000000000
+      internalID: 6662314979597115669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_11
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 1126
+        width: 1018
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33229772d57723720800000000000000
+      internalID: 2824451158292636211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_12
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 1136
+        width: 1033
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94c52a1447056210800000000000000
+      internalID: 1325473654408332442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_13
+      rect:
+        serializedVersion: 2
+        x: 4396
+        y: 1146
+        width: 1088
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce245f36250a9f9f0800000000000000
+      internalID: -434139613339761940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_14
+      rect:
+        serializedVersion: 2
+        x: 5786
+        y: 1141
+        width: 1073
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22f68b2277b9fbe0800000000000000
+      internalID: -1442920504611114453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_15
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 581
+        width: 1068
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882d58b742c2d2bc0800000000000000
+      internalID: -3806337574855388536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_16
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 581
+        width: 1183
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68df379d682892110800000000000000
+      internalID: 1236663088375397766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_17
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 576
+        width: 1193
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2278228709ffdc40800000000000000
+      internalID: 5539419877332775466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_18
+      rect:
+        serializedVersion: 2
+        x: 4361
+        y: 576
+        width: 1228
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef16878bcecb6770800000000000000
+      internalID: 8605198886568861670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_19
+      rect:
+        serializedVersion: 2
+        x: 5811
+        y: 561
+        width: 1083
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa402ddbff1410c0800000000000000
+      internalID: -4606021352286041439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_20
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 6
+        width: 1068
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4fb5a7586e89c20800000000000000
+      internalID: 3213571795086734516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_21
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 6
+        width: 1068
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429e86ec491a03730800000000000000
+      internalID: 3976856131458361636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_22
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 11
+        width: 1053
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f6fd01f94b1c8a0800000000000000
+      internalID: -6286545009556623553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk-ezgif.com-effects_23
+      rect:
+        serializedVersion: 2
+        x: 4391
+        y: 16
+        width: 1058
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a59b1e93196ffad0800000000000000
+      internalID: -2666296921402141278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crawler Walk_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 54
+        width: 6680
+        height: 2610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39085d39a40d35419841533e3bf2930
+      internalID: 102298132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e170c92684c5e994ab04fb9b9d2db950
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Crawler Walk_0: 102298132
+      Walk-ezgif.com-effects_0: 6270522133218398321
+      Walk-ezgif.com-effects_1: 79561146367492359
+      Walk-ezgif.com-effects_10: 6662314979597115669
+      Walk-ezgif.com-effects_11: 2824451158292636211
+      Walk-ezgif.com-effects_12: 1325473654408332442
+      Walk-ezgif.com-effects_13: -434139613339761940
+      Walk-ezgif.com-effects_14: -1442920504611114453
+      Walk-ezgif.com-effects_15: -3806337574855388536
+      Walk-ezgif.com-effects_16: 1236663088375397766
+      Walk-ezgif.com-effects_17: 5539419877332775466
+      Walk-ezgif.com-effects_18: 8605198886568861670
+      Walk-ezgif.com-effects_19: -4606021352286041439
+      Walk-ezgif.com-effects_2: -8335581031422395942
+      Walk-ezgif.com-effects_20: 3213571795086734516
+      Walk-ezgif.com-effects_21: 3976856131458361636
+      Walk-ezgif.com-effects_22: -6286545009556623553
+      Walk-ezgif.com-effects_23: -2666296921402141278
+      Walk-ezgif.com-effects_3: 9085697674620634439
+      Walk-ezgif.com-effects_4: 2375112263899575794
+      Walk-ezgif.com-effects_5: 8209809156009087446
+      Walk-ezgif.com-effects_6: 1976567496678879449
+      Walk-ezgif.com-effects_7: 2970961615007763177
+      Walk-ezgif.com-effects_8: -3336763811053562617
+      Walk-ezgif.com-effects_9: -667467549469694336
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
