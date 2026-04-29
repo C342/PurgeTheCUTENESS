@@ -213,19 +213,19 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-{
-    GetInputs();
-    UpdateJumpVariable();
+    {
+        GetInputs();
+        UpdateJumpVariable();
 
-    if (pState.dashing) return;
+        if (pState.dashing) return;
 
-    Attack();
-    Flip();
-    Move();
-    Jump();
-    StartDash();
-    FlashWhilstInvincible();
-}
+        Attack();
+        Flip();
+        Move();
+        Jump();
+        StartDash();
+        FlashWhilstInvincible();
+    }
 
     public void EndAttack()
     {
