@@ -7,6 +7,8 @@ public class CameraFunction : MonoBehaviour
     [SerializeField] private float shakeSpeed = 0.01f;
     [SerializeField] private float magnitude = 0.01f;
 
+    [SerializeField] private GameObject CamLockPoint;
+
     public static CameraFunction Instance;
     private Vector3 offset;
     private float seed;
@@ -23,7 +25,7 @@ public class CameraFunction : MonoBehaviour
 
     void Update()
     {
-        Vector3 targetPos = PlayerController.Instance.transform.position + offset;
+        Vector3 targetPos = CamLockPoint.transform.position + offset;
         Vector3 followPos = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime * 60f);
 
         float x = (Mathf.PerlinNoise(seed, Time.time * shakeSpeed) - 0.5f) * 2f;

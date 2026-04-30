@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5dae19a8d26b6fc4dbe61a6120256b8f
+guid: d6ebbeeff9c1ed945b8d9d90ac76d64f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4486053076757588991
-    second: walldegenblue_0
+      213: -3795355490499753145
+    second: In between 3 cracked_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walldegenblue_0
+      name: In between 3 cracked_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2030
-        height: 1246
+        width: 1133
+        height: 712
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffb2fa35189a14e30800000000000000
-      internalID: 4486053076757588991
+      spriteID: 74b0f604a40345bc0800000000000000
+      internalID: -3795355490499753145
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      walldegenblue_0: 4486053076757588991
+      In between 3 cracked_0: -3795355490499753145
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
