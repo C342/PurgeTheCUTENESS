@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraFunction : MonoBehaviour
 {
-    [SerializeField] private float followSpeed = 0.01f;
+    [SerializeField] private float followSpeed = 0.05f;
     [SerializeField] private float shakeSpeed = 0.01f;
     [SerializeField] private float magnitude = 0.01f;
 
@@ -29,7 +29,7 @@ public class CameraFunction : MonoBehaviour
         float x = (Mathf.PerlinNoise(seed, Time.time * shakeSpeed) - 0.5f) * 2f;
         float y = (Mathf.PerlinNoise(seed + 1, Time.time * shakeSpeed) - 0.5f) * 2f;
 
-        Vector3 shakeOffset = new Vector3(x, 0, -10) * magnitude;
+        Vector3 shakeOffset = new Vector3(x, y, -10) * magnitude;
 
         transform.position = followPos + shakeOffset;
     }
