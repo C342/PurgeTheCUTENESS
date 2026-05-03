@@ -1,36 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ParallaxController : MonoBehaviour
 {
-    private float _startingPos, _lengthOfSprite;
+    public Camera mainCamera;
 
-    public float AmountOfParallax;
-    public Camera MainCamera;
+    [Range(0f, 1f)]
+    public float parallaxFactorX = 0.3f;
 
-    private void Start()
+    [Range(0f, 1f)]
+    public float parallaxFactorY = 0.15f;
+
+    private Vector3 lastCameraPos;
+
+    void Start()
     {
-        _startingPos = transform.position.x;
-        _lengthOfSprite = GetComponent<SpriteRenderer>().bounds.size.x;
+        lastCameraPos = mainCamera.transform.position;
     }
 
-    private void Update()
+    void LateUpdate()
     {
-        Vector3 Position = MainCamera.transform.position;
-        float Temp = Position.x * (1 - AmountOfParallax);
-        float Distance = Position.x * AmountOfParallax;
+        Vector3 delta = mainCamera.transform.position - lastCameraPos;
 
-        Vector3 NewPosition = new Vector3(_startingPos + Distance, transform.position.y, transform.position.z);
-        transform.position = NewPosition;
+        transform.position += new Vector3(
+            delta.x * parallaxFactorX,
+            delta.y * parallaxFactorY,
+            0f
+        );
 
-        if (Temp > _startingPos + (_lengthOfSprite / 2))
-        {
-            _startingPos += _lengthOfSprite;
-        }
-        else if (Temp < _startingPos - (_lengthOfSprite / 2))
-        {
-            _startingPos -= _lengthOfSprite;
-        }
+        lastCameraPos = mainCamera.transform.position;
     }
 }

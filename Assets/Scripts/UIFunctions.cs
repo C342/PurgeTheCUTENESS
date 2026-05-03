@@ -9,6 +9,11 @@ public class UIFunctions : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
+    public void StartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
     public void OptionsButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
