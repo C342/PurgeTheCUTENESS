@@ -245,11 +245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e6452f5bdfa114384b83b8a992535a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 150
   recoilLength: 75
   recoilFactor: 1
   isRecoiling: 0
   player: {fileID: 0}
   speed: 3.75
-  damage: 50
+  damage: 100
   followDistance: 15

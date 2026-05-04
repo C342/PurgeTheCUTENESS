@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         healthBar.maxValue = player.maxHealth;
+        healthBar.minValue = 0;
     }
 
     void Update()
@@ -18,7 +19,12 @@ public class HealthBar : MonoBehaviour
         int currentHealth = player.health;
         int maxHealth = player.maxHealth;
 
-        healthBar.value = currentHealth;
-        barText.text = currentHealth + "/" + maxHealth;
+        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth, Time.deltaTime * 10f);
+        barText.text = $"{currentHealth} / {maxHealth}";
+
+        if (currentHealth < maxHealth * 0.3f)
+        {
+            healthBar.fillRect.GetComponent<Image>().color = Color.red;
+        }
     }
 }

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings")]
@@ -17,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalScale;
 
     [Header("Ground Check Settings")]
-
     [SerializeField] public Transform GroundCheck;
     [SerializeField] private float groundCheckY = 0.2f;
     [SerializeField] private float groundCheckX = 0.5f;
@@ -40,17 +41,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask attackableLayer;
     [SerializeField] float damage;
 
+    [Header("Arm Attack Settings")]
+    [SerializeField] float armAttackMultiplier = 2f;
+    [SerializeField] bool armRipped = false;
+
     [Header("Recoil Settings")]
     [SerializeField] int recoilXSteps = 5;
     [SerializeField] int recoilYSteps = 5;
     [SerializeField] float recoilYSpeed = 100;
     [SerializeField] float recoilXSpeed = 100;
     int stepsXRecoiled, stepsYRecoiled;
-
-    [Header("Arm Rip Settings")]
-    [SerializeField] private float multiplierIfRipped = 2f;
-    private bool armRipped = false;
-    private bool ripArmInput;
 
     [Header("Health Settings")]
     public int health = 100;
@@ -169,30 +169,52 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        health -= Mathf.RoundToInt(_damage);
-        StartCoroutine(StopTakingDamage());
+        if (pState.invincible) return;
+
+            health = Mathf.Clamp(health - Mathf.RoundToInt(_damage), 0, maxHealth);
+
+            if (health <= 0)
+            {
+                Die();
+                return;
+            }
+
+            StartCoroutine(StopTakingDamage());
     }
+
     IEnumerator StopTakingDamage()
     {
         pState.invincible = true;
+
         yield return new WaitForSeconds(1f);
+
         pState.invincible = false;
-        // i-frame implementation
+    }
+
+    void Die()
+    {
+        rb.linearVelocity = Vector2.zero;
+        this.enabled = false;
+
+        //anim.SetTrigger("Death");
+
+        FadeManager.Instance.FadeAndRestart();
+        Destroy(gameObject, 0f);
     }
 
     public int Health
-{
-    get { return health; }
-    set
     {
-        if (health != value)
+        get { return health; }
+        set
         {
-            health = Mathf.Clamp(value, 0, maxHealth);
+            if (health != value)
+            {
+                health = Mathf.Clamp(health - Mathf.RoundToInt(damage), 0, maxHealth);
+            }
         }
     }
-}
 
-    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength, float _damage)
+    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
 
@@ -202,9 +224,17 @@ public class PlayerController : MonoBehaviour
         }
         for (int i = 0; i < objectsToHit.Length; i++)
         {
-            if (objectsToHit[i].GetComponent<BaseEnemyClass>() != null)
+            BaseEnemyClass enemy = objectsToHit[i].GetComponent<BaseEnemyClass>();
+
+            if (enemy != null)
             {
-                objectsToHit[i].GetComponent<BaseEnemyClass>().EnemyHit(_damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
+                float finalDamage = armRipped ? damage * armAttackMultiplier : damage;
+
+                enemy.EnemyHit
+                (
+                    finalDamage,
+                    (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength
+                );
             }
         }
     }
@@ -214,11 +244,7 @@ public class PlayerController : MonoBehaviour
         GetInputs();
         UpdateJumpVariable();
 
-        if (pState.dashing || pState.locked) return;
-        if(ripArmInput && !armRipped)
-        {
-            StartCoroutine(RipArmRoutine());
-        }
+        if (pState.dashing) return;
 
         Attack();
         Flip();
@@ -240,59 +266,61 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        {
-            if (pState.locked)
-            {
-                rb.linearVelocity = Vector2.zero;
-                rb.gravityScale = 0;
-                return;
-            }
-
-            rb.gravityScale = gravity;
-            Recoil();
-        }
+        Recoil();
     }
 
     void GetInputs()
     {
-        if(pState.locked)
+        if(Input.GetKeyDown(KeyCode.R))
         {
-            yAxis = 0;
-            xAxis = 0;
-            attack = false;
-            return;
+            armAttack();
         }
 
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetButtonDown("Attack");
-        ripArmInput = Input.GetKeyDown(KeyCode.R);
+    }
+
+    void armAttack()
+    {
+        if(armRipped) return;
+
+        armRipped = true;
+
+        StartCoroutine(armAttackLock());
+        anim.SetTrigger("ripArm");
+    }
+
+    IEnumerator armAttackLock()
+    {
+        pState.locked = true;
+
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(1.5f);
+
+        pState.locked = false;
     }
 
     private void Move()
-{
-    if (pState.locked)
     {
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        return;
+        if (pState.locked) return;
+
+            float currentSpeed = Speed;
+
+            if (pState.attacking)
+            {
+                currentSpeed *= attackMoveMultiplier;
+            }
+
+            rb.linearVelocity = new Vector2(currentSpeed * xAxis, rb.linearVelocity.y);
+
+            anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded() && !pState.attacking);
     }
-
-    float currentSpeed = Speed;
-
-    if (pState.attacking)
-    {
-        currentSpeed *= attackMoveMultiplier;
-    }
-
-    rb.linearVelocity = new Vector2(currentSpeed * xAxis, rb.linearVelocity.y);
-
-    anim.SetBool("Walking", Mathf.Abs(rb.linearVelocity.x) > 0.1f && Grounded() && !pState.attacking);
-}
 
     void StartDash()
     {
-        if (pState.locked) return;
-        
+        if(pState.locked) return;
+
         if (Input.GetButtonDown("Dash") && canDash && !dashed)
         {
             StartCoroutine(Dash());
@@ -318,25 +346,6 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
-    IEnumerator RipArmRoutine()
-    {
-        pState.locked = true;
-        armRipped = true;
-        
-        rb.linearVelocity = Vector2.zero;
-
-        anim.SetTrigger("RipArm");
-
-        yield return new WaitForSeconds(1.5f);
-
-        pState.locked = false;
-    }
-
-    public void EndRipArm()
-    {
-        pState.locked = false;
-    }
-
     void Flip()
     {
         if (xAxis < 0)
@@ -352,9 +361,9 @@ public class PlayerController : MonoBehaviour
             pState.lookingRight = true;
         }
     }
+
     void Attack()
     {
-        if(armRipped) return;
         {
             timeSinceAttack += Time.deltaTime;
 
@@ -364,76 +373,32 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(AttackRoutine());
             }
         }
+    }
 
-        if(armRipped)
+    IEnumerator AttackRoutine()
+    {
+        anim.SetTrigger("Attack");
+        pState.attacking = true;
+
+        yield return new WaitForSeconds(0.1f);
+
+        if (yAxis == 0 || yAxis < 0 && Grounded())
         {
-            rippedAttack();
-            return;
+            Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
         }
-    }
-
-    void rippedAttack()
-    {
-        timeSinceAttack += Time.deltaTime;
-
-        if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
+        else if (yAxis > 0)
         {
-            timeSinceAttack = 0;
-            StartCoroutine(rippedAttackCoroutine());
+            Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
         }
+        else if (yAxis < 0 && !Grounded())
+        {
+            Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
+        }
+
+        yield return new WaitForSeconds(0.2f);
+
+        pState.attacking = false;
     }
-
-    IEnumerator rippedAttackCoroutine()
-{
-    //anim.SetTrigger("rippedAttack");
-    pState.attacking = true;
-
-    yield return new WaitForSeconds(0.1f);
-
-    float boostedDamage = damage * multiplierIfRipped;
-
-    if (yAxis == 0 || yAxis < 0 && Grounded())
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
-    }
-    else if (yAxis > 0)
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
-    }
-    else if (yAxis < 0 && !Grounded())
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
-    }
-
-    yield return new WaitForSeconds(0.2f);
-
-    pState.attacking = false;
-}
-
-IEnumerator AttackRoutine()
-{
-    anim.SetTrigger("Attack");
-    pState.attacking = true;
-
-    yield return new WaitForSeconds(0.1f);
-
-    if (yAxis == 0 || yAxis < 0 && Grounded())
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
-    }
-    else if (yAxis > 0)
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
-    }
-    else if (yAxis < 0 && !Grounded())
-    {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
-    }
-
-    yield return new WaitForSeconds(0.2f);
-
-    pState.attacking = false;
-}
 
     public bool Grounded()
     {
@@ -451,7 +416,7 @@ IEnumerator AttackRoutine()
 
     void Jump()
     {
-        if (pState.locked) return;
+        if(pState.locked) return;
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
         {
