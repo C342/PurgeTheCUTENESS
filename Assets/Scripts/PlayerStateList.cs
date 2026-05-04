@@ -8,4 +8,6 @@ public class PlayerStateList : MonoBehaviour
     public bool lookingRight;
     public bool invincible;
     public bool attacking;
+    
+    public bool locked;
 }

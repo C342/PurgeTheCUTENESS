@@ -47,10 +47,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float recoilXSpeed = 100;
     int stepsXRecoiled, stepsYRecoiled;
 
+    [Header("Arm Rip Settings")]
+    [SerializeField] private float multiplierIfRipped = 2f;
+    private bool armRipped = false;
+    private bool ripArmInput;
+
     [Header("Health Settings")]
     public int health = 100;
     public int maxHealth = 100;
-    [SerializeField] float hitFlashSpeed;
 
     [HideInInspector] public PlayerStateList pState;
     private Rigidbody2D rb;
@@ -163,13 +167,6 @@ public class PlayerController : MonoBehaviour
         pState.recoilingY = false;
     }
 
-    void FlashWhilstInvincible()
-    {
-        sr.material.color = pState.invincible ? 
-            Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : 
-            Color.white;
-    }
-
     public void TakeDamage(float _damage)
     {
         health -= Mathf.RoundToInt(_damage);
@@ -195,7 +192,7 @@ public class PlayerController : MonoBehaviour
     }
 }
 
-    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
+    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength, float _damage)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
 
@@ -207,7 +204,7 @@ public class PlayerController : MonoBehaviour
         {
             if (objectsToHit[i].GetComponent<BaseEnemyClass>() != null)
             {
-                objectsToHit[i].GetComponent<BaseEnemyClass>().EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
+                objectsToHit[i].GetComponent<BaseEnemyClass>().EnemyHit(_damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
             }
         }
     }
@@ -217,14 +214,17 @@ public class PlayerController : MonoBehaviour
         GetInputs();
         UpdateJumpVariable();
 
-        if (pState.dashing) return;
+        if (pState.dashing || pState.locked) return;
+        if(ripArmInput && !armRipped)
+        {
+            StartCoroutine(RipArmRoutine());
+        }
 
         Attack();
         Flip();
         Move();
         Jump();
         StartDash();
-        FlashWhilstInvincible();
     }
 
     public void EndAttack()
@@ -240,18 +240,43 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Recoil();
+        {
+            if (pState.locked)
+            {
+                rb.linearVelocity = Vector2.zero;
+                rb.gravityScale = 0;
+                return;
+            }
+
+            rb.gravityScale = gravity;
+            Recoil();
+        }
     }
 
     void GetInputs()
     {
+        if(pState.locked)
+        {
+            yAxis = 0;
+            xAxis = 0;
+            attack = false;
+            return;
+        }
+
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetButtonDown("Attack");
+        ripArmInput = Input.GetKeyDown(KeyCode.R);
     }
 
     private void Move()
 {
+    if (pState.locked)
+    {
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        return;
+    }
+
     float currentSpeed = Speed;
 
     if (pState.attacking)
@@ -266,6 +291,8 @@ public class PlayerController : MonoBehaviour
 
     void StartDash()
     {
+        if (pState.locked) return;
+        
         if (Input.GetButtonDown("Dash") && canDash && !dashed)
         {
             StartCoroutine(Dash());
@@ -291,6 +318,25 @@ public class PlayerController : MonoBehaviour
         canDash = true;
     }
 
+    IEnumerator RipArmRoutine()
+    {
+        pState.locked = true;
+        armRipped = true;
+        
+        rb.linearVelocity = Vector2.zero;
+
+        anim.SetTrigger("RipArm");
+
+        yield return new WaitForSeconds(1.5f);
+
+        pState.locked = false;
+    }
+
+    public void EndRipArm()
+    {
+        pState.locked = false;
+    }
+
     void Flip()
     {
         if (xAxis < 0)
@@ -307,17 +353,61 @@ public class PlayerController : MonoBehaviour
         }
     }
     void Attack()
-{
-    
+    {
+        if(armRipped) return;
+        {
+            timeSinceAttack += Time.deltaTime;
+
+            if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
+            {
+                timeSinceAttack = 0;
+                StartCoroutine(AttackRoutine());
+            }
+        }
+
+        if(armRipped)
+        {
+            rippedAttack();
+            return;
+        }
+    }
+
+    void rippedAttack()
     {
         timeSinceAttack += Time.deltaTime;
 
         if (attack && timeSinceAttack >= timeBetweenAttack && !pState.attacking)
         {
             timeSinceAttack = 0;
-            StartCoroutine(AttackRoutine());
+            StartCoroutine(rippedAttackCoroutine());
         }
     }
+
+    IEnumerator rippedAttackCoroutine()
+{
+    //anim.SetTrigger("rippedAttack");
+    pState.attacking = true;
+
+    yield return new WaitForSeconds(0.1f);
+
+    float boostedDamage = damage * multiplierIfRipped;
+
+    if (yAxis == 0 || yAxis < 0 && Grounded())
+    {
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
+    }
+    else if (yAxis > 0)
+    {
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
+    }
+    else if (yAxis < 0 && !Grounded())
+    {
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, boostedDamage);
+    }
+
+    yield return new WaitForSeconds(0.2f);
+
+    pState.attacking = false;
 }
 
 IEnumerator AttackRoutine()
@@ -329,15 +419,15 @@ IEnumerator AttackRoutine()
 
     if (yAxis == 0 || yAxis < 0 && Grounded())
     {
-        Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
     }
     else if (yAxis > 0)
     {
-        Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
     }
     else if (yAxis < 0 && !Grounded())
     {
-        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed);
+        Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingX, recoilXSpeed, damage);
     }
 
     yield return new WaitForSeconds(0.2f);
@@ -361,6 +451,8 @@ IEnumerator AttackRoutine()
 
     void Jump()
     {
+        if (pState.locked) return;
+
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
