@@ -17,7 +17,9 @@ public class DialogueTrigger : MonoBehaviour
             "NOT SURE EITHER.",
             "YOU FEEL DIZZY, LIKE YOUR MIND IS IN THE GUTTER.",
             "YOUR VISION IS GETTING SHAKIER BY THE SECOND.",
-            "GET OUT OF THIS PLACE."
+            "CREATURES OF BONE AND FLESH HUNT YOUR..",
+            "<color=#FF69B4>CUTENESS.</color>",
+            "GET OUT OF THIS HELL."
         };
 
         dialogueManager.StartDialogue(lines);
@@ -25,7 +27,6 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnMouseDown()
     {
-        UnityEngine.Debug.Log("Dialogue Triggered");
         TriggerDialogue();
     }
 }

@@ -86,10 +86,27 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
-        foreach (char letter in line.ToCharArray())
+        bool insideTag = false;
+
+        for (int i = 0; i < line.Length; i++)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            char c = line[i];
+
+            dialogueText.text += c;
+
+            if (c == '<')
+                insideTag = true;
+
+            if (c == '>')
+                insideTag = false;
+
+            if (!insideTag)
+            {
+                if (c == '.' || c == ',' || c == '!' || c == '?')
+                    yield return new WaitForSeconds(typingSpeed * 5f);
+                else
+                    yield return new WaitForSeconds(typingSpeed);
+            }
         }
 
         isTyping = false;
