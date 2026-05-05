@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 05c9fb0c68d2e994e92004836b9b7e59
+guid: 456db8892abd5634b995246975b0717b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8504740205305853237
-    second: Round plat 1_0
+      213: -7321995913226125685
+    second: Small normal plat 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Round plat 1_0
+      name: Small normal plat 1_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 107
-        width: 1162
-        height: 494
+        x: 619
+        y: 195
+        width: 614
+        height: 406
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 535fc3c1828e60670800000000000000
-      internalID: 8504740205305853237
+      spriteID: b8e7b41b28b036a90800000000000000
+      internalID: -7321995913226125685
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Round plat 1_0: 8504740205305853237
+      Small normal plat 1_0: -7321995913226125685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

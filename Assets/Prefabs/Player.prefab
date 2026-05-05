@@ -249,7 +249,7 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 0.75
   playerCamera: {fileID: 0}
-  timeBetweenAttack: 0.4
+  timeBetweenAttack: 2
   SideAttackTransform: {fileID: 330638425052372456}
   UpAttackTransform: {fileID: 5085757109115846658}
   DownAttackTransform: {fileID: 2388108300289442670}
@@ -259,14 +259,15 @@ MonoBehaviour:
   attackableLayer:
     serializedVersion: 2
     m_Bits: 128
-  damage: 100
+  damage: 50
+  armAttackMultiplier: 2
+  armRipped: 0
   recoilXSteps: 0
   recoilYSteps: 0
   recoilYSpeed: 0
   recoilXSpeed: 0
   health: 100
   maxHealth: 100
-  hitFlashSpeed: 0.5
   pState: {fileID: 0}
 --- !u!61 &6774718526164887289
 BoxCollider2D:
@@ -360,6 +361,7 @@ MonoBehaviour:
   lookingRight: 0
   invincible: 0
   attacking: 0
+  locked: 0
 --- !u!95 &5743087347526347144
 Animator:
   serializedVersion: 7

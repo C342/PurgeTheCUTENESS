@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 14cdc6d954602674b998d8340d3d74b6
+guid: ae0a22a0822549741bb554e2f4f7c922
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8798867964462261630
-    second: Round plat 3_0
-  - first:
-      213: 2986391864047521688
-    second: Round plat 3_1
+      213: 1657817327888072851
+    second: Small plat normal 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Round plat 3_0
+      name: Small plat normal 3_0
       rect:
         serializedVersion: 2
-        x: 167
-        y: 115
-        width: 1086
-        height: 490
+        x: 111
+        y: 191
+        width: 422
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,30 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7566579bcbdb1a70800000000000000
-      internalID: 8798867964462261630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Round plat 3_1
-      rect:
-        serializedVersion: 2
-        x: 1363
-        y: 119
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89f4ba8e39bc17920800000000000000
-      internalID: 2986391864047521688
+      spriteID: 39081438310c10710800000000000000
+      internalID: 1657817327888072851
       vertices: []
       indices: 
       edges: []
@@ -199,8 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Round plat 3_0: 8798867964462261630
-      Round plat 3_1: 2986391864047521688
+      Small plat normal 3_0: 1657817327888072851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
