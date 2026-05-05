@@ -505,7 +505,7 @@ MonoBehaviour:
   targetImage: {fileID: 758118810}
   countdownText: {fileID: 1112277504}
   startDelay: 5
-  countdownTime: 240
+  countdownTime: 120
   targetColor: {r: 0.5568628, g: 0.20784314, b: 0.20784314, a: 1}
 --- !u!1 &929013000
 GameObject:
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 240
+  m_text: 120
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
