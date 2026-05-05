@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1841995209}
   fadeDuration: 1.5
-  sceneToLoad: Prologue
+  sceneToLoad: Dialogue1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

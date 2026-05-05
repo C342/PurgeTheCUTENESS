@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6644779114545756512}
   - component: {fileID: 701829345316416044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform edges x3_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4376331008462515682}
   - component: {fileID: 7844908442246135217}
   - component: {fileID: 8206815806781902972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CrackedFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8355641044921983582}
   - component: {fileID: 4064764339250990974}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform edges x3_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
