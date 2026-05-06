@@ -250,6 +250,6 @@ MonoBehaviour:
   recoilFactor: 1
   isRecoiling: 0
   player: {fileID: 0}
-  speed: 3.75
-  damage: 100
+  speed: 3.5
+  damage: 75
   followDistance: 15

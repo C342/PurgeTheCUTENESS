@@ -3,10 +3,12 @@ using UnityEngine;
 public class FatOne : BaseEnemyClass
 {
     [SerializeField] private float followDistance = 15f;
+    private Animator anim;
 
     protected void Awake()
     {
         base.Awake();
+        anim = GetComponent<Animator>();
     }
 
     void Start()
@@ -17,21 +19,50 @@ public class FatOne : BaseEnemyClass
     protected void Update()
     {
         base.Update();
+        bool isMoving = false;
 
         if (!isRecoiling)
         {
             float distanceToPlayer = Vector2.Distance
-                (transform.position,
-                PlayerController.Instance.transform.position);
+            (
+                transform.position,
+                PlayerController.Instance.transform.position
+            );
 
             if (distanceToPlayer <= followDistance)
             {
-                transform.position = Vector2.MoveTowards
-                    (transform.position,
-                    new Vector2(PlayerController.Instance.transform.position.x, transform.position.y),
-                    speed * Time.deltaTime);
+                Vector2 targetPos = new Vector2(
+                    PlayerController.Instance.transform.position.x,
+                    transform.position.y
+                );
+
+                Vector2 newPos = Vector2.MoveTowards
+                (
+                    transform.position,
+                    targetPos,
+                    speed * Time.deltaTime
+                );
+
+                isMoving = newPos != (Vector2)transform.position;
+
+                transform.position = newPos;
             }
         }
+
+        float playerX = PlayerController.Instance.transform.position.x;
+        Vector3 scale = transform.localScale;
+
+        if (playerX > transform.position.x)
+        {
+            scale.x = -Mathf.Abs(scale.x);
+        }
+        else if (playerX < transform.position.x)
+        {
+            scale.x = Mathf.Abs(scale.x);
+        }
+
+        transform.localScale = scale;
+        anim.SetBool("Walking", isMoving);
     }
 
     public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)

@@ -19,7 +19,6 @@ public class BaseEnemyClass : MonoBehaviour
     protected Rigidbody2D rb;
     protected Animator anim;
 
-
     private Vector3 originalScale;
     private int facingDirection = 1;
     private float xAxis, yAxis;

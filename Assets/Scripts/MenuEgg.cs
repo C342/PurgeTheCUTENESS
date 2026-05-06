@@ -21,7 +21,7 @@ public class MenuEgg : MonoBehaviour
     {
         if (targetImage == null)
         {
-            Debug.LogError("No Image assigned!");
+            Debug.LogError("ASSIGN IMG");
             enabled = false;
             return;
         }
