@@ -229,7 +229,7 @@ MonoBehaviour:
   isRecoiling: 0
   player: {fileID: 0}
   speed: 7.5
-  damage: 25
+  damage: 50
   followDistance: 20
 --- !u!95 &3359306391282069306
 Animator:
