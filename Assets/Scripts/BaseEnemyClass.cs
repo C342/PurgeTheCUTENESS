@@ -50,15 +50,30 @@ public class BaseEnemyClass : MonoBehaviour
         }
     }
 
-    public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
+        public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {
         health -= _damageDone;
-        if (!isRecoiling)
-        {
-            rb.AddForce(-_hitForce * recoilFactor * _hitDirection);
-        }
+
+        StopAllCoroutines();
+
+        rb.linearVelocity = Vector2.zero;
+
+        rb.AddForce(
+            -_hitDirection * _hitForce * recoilFactor,
+            ForceMode2D.Impulse
+        );
+
+        StartCoroutine(RecoilCooldown());
     }
 
+    IEnumerator RecoilCooldown()
+    {
+        isRecoiling = true;
+
+        yield return new WaitForSeconds(recoilLength);
+
+        isRecoiling = false;
+    }
     void Flip()
     {
         if (xAxis < 0)

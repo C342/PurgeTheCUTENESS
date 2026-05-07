@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2459755723ac0354fa18e8d57c216e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   recoilLength: 50
   recoilFactor: 1
   isRecoiling: 0

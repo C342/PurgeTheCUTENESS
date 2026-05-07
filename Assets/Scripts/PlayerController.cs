@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Unity.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -214,27 +215,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
+        private void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
     {
-        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
+        Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(
+            _attackTransform.position,
+            _attackArea,
+            0,
+            attackableLayer
+        );
 
-        if (objectsToHit.Length > 0)
-        {
-            _recoilDir = true;
-        }
+        HashSet<BaseEnemyClass> hitEnemies = new HashSet<BaseEnemyClass>(); // HERE
+
         for (int i = 0; i < objectsToHit.Length; i++)
         {
             BaseEnemyClass enemy = objectsToHit[i].GetComponent<BaseEnemyClass>();
 
-            if (enemy != null)
+            if (enemy != null && !hitEnemies.Contains(enemy))
             {
+                hitEnemies.Add(enemy);
+
                 float finalDamage = armRipped ? damage * armAttackMultiplier : damage;
 
-                enemy.EnemyHit
-                (
+                enemy.EnemyHit(
                     finalDamage,
-                    (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength
+                    (transform.position - objectsToHit[i].transform.position).normalized,
+                    _recoilStrength
                 );
+
+                _recoilDir = true;
             }
         }
     }
