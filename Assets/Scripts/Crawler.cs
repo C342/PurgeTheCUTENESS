@@ -20,6 +20,7 @@ public class Crawler : BaseEnemyClass
     {
         base.Update();
         bool isMoving = false;
+        bool isAttacking = false;
 
         if (!isRecoiling)
         {
@@ -68,5 +69,7 @@ public class Crawler : BaseEnemyClass
     public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {
         base.EnemyHit(_damageDone, _hitDirection, _hitForce);
+
+        bool isAttacking = true;
     }
 }

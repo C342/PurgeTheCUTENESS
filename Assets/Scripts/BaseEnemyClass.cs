@@ -50,7 +50,7 @@ public class BaseEnemyClass : MonoBehaviour
         }
     }
 
-        public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
+    public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {
         health -= _damageDone;
 
@@ -58,10 +58,7 @@ public class BaseEnemyClass : MonoBehaviour
 
         rb.linearVelocity = Vector2.zero;
 
-        rb.AddForce(
-            -_hitDirection * _hitForce * recoilFactor,
-            ForceMode2D.Impulse
-        );
+        rb.AddForce(-_hitDirection * _hitForce * recoilFactor, ForceMode2D.Impulse);
 
         StartCoroutine(RecoilCooldown());
     }

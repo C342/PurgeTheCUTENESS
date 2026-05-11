@@ -249,7 +249,7 @@ MonoBehaviour:
   recoilLength: 75
   recoilFactor: 1
   isRecoiling: 0
-  player: {fileID: 0}
+  player: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
   speed: 3.5
   damage: 75
   followDistance: 15
