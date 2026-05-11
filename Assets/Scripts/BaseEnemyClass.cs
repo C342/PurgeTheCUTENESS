@@ -48,7 +48,7 @@ public class BaseEnemyClass : MonoBehaviour
                 recoilTimer = 0;
             }
         }
-    }
+    } 
 
     public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
     {
