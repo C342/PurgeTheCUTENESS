@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4705245601102881001
 Transform:
   m_ObjectHideFlags: 0
@@ -227,10 +227,12 @@ MonoBehaviour:
   recoilLength: 50
   recoilFactor: 1
   isRecoiling: 0
-  player: {fileID: 3063911820435952455, guid: 42ae21ddb0f5f9742a8e84f31afd0f99, type: 3}
+  player: {fileID: 0}
   speed: 6.5
   damage: 50
   followDistance: 20
+  attackCooldown: 1
+  attackRange: 2
 --- !u!95 &3359306391282069306
 Animator:
   serializedVersion: 7

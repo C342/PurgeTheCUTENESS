@@ -195,12 +195,23 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         rb.linearVelocity = Vector2.zero;
+        
+        pState.locked = true;
+
         this.enabled = false;
 
         //anim.SetTrigger("Death");
 
-        FadeManager.Instance.FadeAndRestart();
+        StartCoroutine(DeathRoutine());
+    }
+
+    IEnumerator DeathRoutine()
+    {
         Destroy(gameObject, 0f);
+
+        FadeManager.Instance.FadeAndRestart();
+
+        return null;
     }
 
     public int Health

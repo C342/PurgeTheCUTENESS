@@ -1,9 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class Crawler : BaseEnemyClass
 {
     [SerializeField] private float followDistance = 20f;
+
+    [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private float attackRange = 2f;
     private Animator anim;
+    private bool isAttacking;
+    private float attackTimer;
 
     protected void Awake()
     {
@@ -19,57 +25,94 @@ public class Crawler : BaseEnemyClass
     protected void Update()
     {
         base.Update();
+
+        attackTimer -= Time.deltaTime;
+
         bool isMoving = false;
-        bool isAttacking = false;
 
-        if (!isRecoiling)
+        float distanceToPlayer = Vector2.Distance(
+            transform.position,
+            PlayerController.Instance.transform.position
+        );
+
+        if (!isRecoiling && !isAttacking)
         {
-            float distanceToPlayer = Vector2.Distance
-            (
-                transform.position,
-                PlayerController.Instance.transform.position
-            );
-
             if (distanceToPlayer <= followDistance)
             {
-                Vector2 targetPos = new Vector2(
-                    PlayerController.Instance.transform.position.x,
-                    transform.position.y
-                );
+                if (distanceToPlayer > attackRange)
+                {
+                    Vector2 targetPos = new Vector2(
+                        PlayerController.Instance.transform.position.x,
+                        transform.position.y
+                    );
 
-                Vector2 newPos = Vector2.MoveTowards
-                (
-                    transform.position,
-                    targetPos,
-                    speed * Time.deltaTime
-                );
+                    Vector2 newPos = Vector2.MoveTowards(
+                        transform.position,
+                        targetPos,
+                        speed * Time.deltaTime
+                    );
 
-                isMoving = newPos != (Vector2)transform.position;
+                    isMoving = newPos != (Vector2)transform.position;
 
-                transform.position = newPos;
+                        transform.position = newPos;
+                    }
+                    else
+                    {
+                        if (attackTimer <= 0)
+                        {
+                            StartCoroutine(AttackRoutine());
+                        }
+                    }
+                }
             }
-        }
 
-        float playerX = PlayerController.Instance.transform.position.x;
-        Vector3 scale = transform.localScale;
+        FlipTowardsPlayer();
 
-        if (playerX > transform.position.x)
-        {
-            scale.x = -Mathf.Abs(scale.x);
-        }
-        else if (playerX < transform.position.x)
-        {
-            scale.x = Mathf.Abs(scale.x);
-        }
-
-        transform.localScale = scale;
-        anim.SetBool("Walking", isMoving);
+        anim.SetBool("Walking", isMoving && !isAttacking);
     }
 
-    public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)
+    IEnumerator AttackRoutine()
     {
-        base.EnemyHit(_damageDone, _hitDirection, _hitForce);
+        isAttacking = true;
 
-        bool isAttacking = true;
+        attackTimer = attackCooldown;
+
+        rb.linearVelocity = Vector2.zero;
+
+        anim.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(0.3f);
+
+        if (Vector2.Distance(
+            transform.position,
+            PlayerController.Instance.transform.position
+        ) <= attackRange + 0.5f)
+        {
+            PlayerController.Instance.TakeDamage(damage);
+        }
+
+        yield return new WaitForSeconds(2.5f);
+
+        isAttacking = false;
+    }
+
+    private void FlipTowardsPlayer()
+    {
+        if (PlayerController.Instance.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(
+                -Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z
+            );
+        }
+        else
+        {
+            transform.localScale = new Vector3(
+                Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z
+            );
+        }
     }
 }

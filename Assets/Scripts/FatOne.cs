@@ -3,11 +3,13 @@ using UnityEngine;
 public class FatOne : BaseEnemyClass
 {
     [SerializeField] private float followDistance = 15f;
-    private Animator anim;
+    [SerializeField] private SpriteRenderer sr;
 
-    protected void Awake()
+    protected override void Awake()
     {
         base.Awake();
+        
+        sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -49,20 +51,20 @@ public class FatOne : BaseEnemyClass
             }
         }
 
-        float playerX = PlayerController.Instance.transform.position.x;
-        Vector3 scale = transform.localScale;
-
-        if (playerX > transform.position.x)
-        {
-            scale.x = -Mathf.Abs(scale.x);
-        }
-        else if (playerX < transform.position.x)
-        {
-            scale.x = Mathf.Abs(scale.x);
-        }
-
-        transform.localScale = scale;
         anim.SetBool("Walking", isMoving);
+        FlipTowardsPlayer();
+    }
+
+    private void FlipTowardsPlayer()
+    {
+        if (PlayerController.Instance.transform.position.x > transform.position.x)
+        {
+            sr.flipX = false;
+        }
+        else
+        {
+            sr.flipX = true;
+        }
     }
 
     public void EnemyHit(float _damageDone, Vector2 _hitDirection, float _hitForce)

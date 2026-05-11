@@ -253,3 +253,4 @@ MonoBehaviour:
   speed: 3.5
   damage: 75
   followDistance: 15
+  sr: {fileID: 6577822046032032530}

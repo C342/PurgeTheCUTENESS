@@ -19,34 +19,11 @@ public class BaseEnemyClass : MonoBehaviour
     protected Rigidbody2D rb;
     protected Animator anim;
 
-    private Vector3 originalScale;
-    private int facingDirection = 1;
-    private float xAxis, yAxis;
-
-    public virtual void Start()
-    {
-
-    }
-
     protected private virtual void Update()
     {
-        Flip();
-
         if (health <= 0)
         {
             Destroy(gameObject);
-        }
-        if (isRecoiling)
-        {
-            if (recoilTimer < recoilLength)
-            {
-                recoilTimer += Time.deltaTime;
-            }
-            else
-            {
-                isRecoiling = false;
-                recoilTimer = 0;
-            }
         }
     } 
 
@@ -54,7 +31,7 @@ public class BaseEnemyClass : MonoBehaviour
     {
         health -= _damageDone;
 
-        StopAllCoroutines();
+        isRecoiling = true;
 
         rb.linearVelocity = Vector2.zero;
 
@@ -65,24 +42,9 @@ public class BaseEnemyClass : MonoBehaviour
 
     IEnumerator RecoilCooldown()
     {
-        isRecoiling = true;
-
         yield return new WaitForSeconds(recoilLength);
 
         isRecoiling = false;
-    }
-    void Flip()
-    {
-        if (xAxis < 0)
-        {
-            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
-            facingDirection = -1;
-        }
-        else if (xAxis > 0)
-        {
-            transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
-            facingDirection = 1;
-        }
     }
 
     protected void OnTriggerStay2D(Collider2D _other)
@@ -97,7 +59,7 @@ public class BaseEnemyClass : MonoBehaviour
         PlayerController.Instance.TakeDamage(damage);
     }
 
-    public virtual void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = rb.GetComponent<Animator>();
