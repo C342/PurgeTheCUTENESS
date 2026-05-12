@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: d8a4dded606b89f4fb62f0df78cbb13b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5012141953169124228
+    second: Gore strands 2_0
+  - first:
+      213: 5027202122264077711
+    second: Gore strands 2_1
+  - first:
+      213: 7598999183764622495
+    second: Gore strands 2_2
+  - first:
+      213: 3756229581980074348
+    second: Gore strands 2_3
+  - first:
+      213: 4221792436470325054
+    second: Gore strands 2_4
+  - first:
+      213: 7879595720272054349
+    second: Gore strands 2_5
+  - first:
+      213: 6885856636084605688
+    second: Gore strands 2_6
+  - first:
+      213: 2793378549315926548
+    second: Gore strands 2_7
+  - first:
+      213: 6041935238581776137
+    second: Gore strands 2_8
+  - first:
+      213: 6661656919680674176
+    second: Gore strands 2_9
+  - first:
+      213: 4017905628344304060
+    second: Gore strands 2_10
+  - first:
+      213: -6241417150000236762
+    second: Gore strands 2_11
+  - first:
+      213: -7850819032773161267
+    second: Gore strands 2_12
+  - first:
+      213: -422748809661141008
+    second: Gore strands 2_13
+  - first:
+      213: 6422932812824982768
+    second: Gore strands 2_14
+  - first:
+      213: 4130176191425264292
+    second: Gore strands 2_15
+  - first:
+      213: -7276932517055967657
+    second: Gore strands 2_16
+  - first:
+      213: 5779935937915238981
+    second: Gore strands 2_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gore strands 2_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1727
+        width: 234
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c749585f27b417ab0800000000000000
+      internalID: -5012141953169124228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1467
+        width: 398
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85e3a7e1b534c540800000000000000
+      internalID: 5027202122264077711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_2
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1431
+        width: 726
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c06c41f71157960800000000000000
+      internalID: 7598999183764622495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_3
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 1275
+        width: 422
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c618cb847eec02430800000000000000
+      internalID: 3756229581980074348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_4
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1623
+        width: 486
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f9e3b5ad1d69a30800000000000000
+      internalID: 4221792436470325054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 867
+        width: 486
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4801884f82f95d60800000000000000
+      internalID: 7879595720272054349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_6
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 883
+        width: 386
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2d610b02a7f8f50800000000000000
+      internalID: 6885856636084605688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_7
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 943
+        width: 226
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41afb2b9df214c620800000000000000
+      internalID: 2793378549315926548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_8
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 919
+        width: 158
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fe493861449d350800000000000000
+      internalID: 6041935238581776137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_9
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 295
+        width: 366
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089e6196ca5f27c50800000000000000
+      internalID: 6661656919680674176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_10
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 307
+        width: 422
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1418691e772c730800000000000000
+      internalID: 4017905628344304060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_11
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 431
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6277437ab280269a0800000000000000
+      internalID: -6241417150000236762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_12
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 403
+        width: 422
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce0ea36fa94c0390800000000000000
+      internalID: -7850819032773161267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_13
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 291
+        width: 22
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ffadea8238122af0800000000000000
+      internalID: -422748809661141008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_14
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 179
+        width: 466
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f432a4fc57d22950800000000000000
+      internalID: 6422932812824982768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_15
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 199
+        width: 874
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aabdad0d55515930800000000000000
+      internalID: 4130176191425264292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_16
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 103
+        width: 498
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ec36a3e64230b90800000000000000
+      internalID: -7276932517055967657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gore strands 2_17
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 111
+        width: 894
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ab3f3bc15763050800000000000000
+      internalID: 5779935937915238981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Gore strands 2_0: -5012141953169124228
+      Gore strands 2_1: 5027202122264077711
+      Gore strands 2_10: 4017905628344304060
+      Gore strands 2_11: -6241417150000236762
+      Gore strands 2_12: -7850819032773161267
+      Gore strands 2_13: -422748809661141008
+      Gore strands 2_14: 6422932812824982768
+      Gore strands 2_15: 4130176191425264292
+      Gore strands 2_16: -7276932517055967657
+      Gore strands 2_17: 5779935937915238981
+      Gore strands 2_2: 7598999183764622495
+      Gore strands 2_3: 3756229581980074348
+      Gore strands 2_4: 4221792436470325054
+      Gore strands 2_5: 7879595720272054349
+      Gore strands 2_6: 6885856636084605688
+      Gore strands 2_7: 2793378549315926548
+      Gore strands 2_8: 6041935238581776137
+      Gore strands 2_9: 6661656919680674176
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

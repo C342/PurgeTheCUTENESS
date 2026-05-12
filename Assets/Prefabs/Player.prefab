@@ -249,7 +249,7 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 0.75
   playerCamera: {fileID: 0}
-  timeBetweenAttack: 2
+  timeBetweenAttack: 1
   SideAttackTransform: {fileID: 330638425052372456}
   UpAttackTransform: {fileID: 5085757109115846658}
   DownAttackTransform: {fileID: 2388108300289442670}

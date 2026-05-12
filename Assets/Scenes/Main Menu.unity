@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &749444737
 AudioSource:
   m_ObjectHideFlags: 0
@@ -300,8 +300,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dc19f4d3149a8974a882bba0b6fd43b9, type: 3}
-  m_Resource: {fileID: 8300000, guid: dc19f4d3149a8974a882bba0b6fd43b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9543565ff5ca9094aa044320b7368203, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9543565ff5ca9094aa044320b7368203, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758118808}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f6ae49622a8b114c9b4a6d4825d6ea7, type: 3}
   m_Name: 
@@ -505,7 +505,7 @@ MonoBehaviour:
   targetImage: {fileID: 758118810}
   countdownText: {fileID: 1112277504}
   startDelay: 5
-  countdownTime: 240
+  countdownTime: 180
   targetColor: {r: 0.63529414, g: 0, b: 0, a: 1}
 --- !u!1 &929013000
 GameObject:
@@ -661,7 +661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1112277503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 240
+  m_text: 180
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
