@@ -46,6 +46,23 @@ public class DialogueTrigger : MonoBehaviour
         dialogueManager.StartDialogue(lines);
     }
 
+    public void TriggerFinalDialogue()
+    {
+        List<string> lines = new List<string>()
+        {
+            "IT'S ALMOST LIKE YOUR MISSING HALF YOUR HEAD.",
+            "YOUR <color=#1338BE>VISION</color> IS STARTING TO FAIL YOU.",
+            "BEWARE OF <color=#3b8132>SPITTERS.</color>",
+            "...",
+            "Y.",
+            "...",
+            "YOU REMEMBER YOUR NAME IS <color=#f1ee8e>MAY.</color>",
+            "GET OUT OF THIS HELL."
+        };
+
+        dialogueManager.StartDialogue(lines);
+    }
+
     void OnMouseDown()
     {
         TriggerDialogue();
