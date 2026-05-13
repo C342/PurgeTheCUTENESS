@@ -7,7 +7,6 @@ public class Crawler : BaseEnemyClass
 
     [SerializeField] private float attackCooldown = 1f;
     [SerializeField] private float attackRange = 2f;
-    private Animator anim;
     private bool isAttacking;
     private float attackTimer;
 
