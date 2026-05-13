@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: b229dafad31c0f548898ee359aedad88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6983397893145320760
+    second: Death crawl 2_0
+  - first:
+      213: 2677363269272309430
+    second: Death crawl 2_1
+  - first:
+      213: -6898139071670752762
+    second: Death crawl 2_2
+  - first:
+      213: 5959214285315759526
+    second: Death crawl 2_3
+  - first:
+      213: -1180093829279348686
+    second: Death crawl 2_4
+  - first:
+      213: -1497939049867475453
+    second: Death crawl 2_5
+  - first:
+      213: 2353043027601893895
+    second: Death crawl 2_6
+  - first:
+      213: -1042170533703301366
+    second: Death crawl 2_7
+  - first:
+      213: -6968743345848185819
+    second: Death crawl 2_8
+  - first:
+      213: -8015376811015147484
+    second: Death crawl 2_9
+  - first:
+      213: 2153669747762104657
+    second: Death crawl 2_10
+  - first:
+      213: 6193938266204115473
+    second: Death crawl 2_11
+  - first:
+      213: -1668334853593852487
+    second: Death crawl 2_12
+  - first:
+      213: 6015367915204276366
+    second: Death crawl 2_13
+  - first:
+      213: -8367943208156273151
+    second: Death crawl 2_14
+  - first:
+      213: 6855540438472726093
+    second: Death crawl 2_15
+  - first:
+      213: 1956453501325540045
+    second: Death crawl 2_16
+  - first:
+      213: 1700784562891850301
+    second: Death crawl 2_17
+  - first:
+      213: 3709598030814884284
+    second: Death crawl 2_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Death crawl 2_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 11
+        width: 818
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c2acd5ad9cf51f90800000000000000
+      internalID: -6983397893145320760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_1
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 7
+        width: 830
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be87a745b7e72520800000000000000
+      internalID: 2677363269272309430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_2
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 15
+        width: 934
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a62ddef03e440a0800000000000000
+      internalID: -6898139071670752762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_3
+      rect:
+        serializedVersion: 2
+        x: 3903
+        y: 15
+        width: 1102
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6addda8b1d163b250800000000000000
+      internalID: 5959214285315759526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_4
+      rect:
+        serializedVersion: 2
+        x: 4615
+        y: 7
+        width: 110
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2388c282ae67f9fe0800000000000000
+      internalID: -1180093829279348686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_5
+      rect:
+        serializedVersion: 2
+        x: 5199
+        y: 7
+        width: 1190
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 306867dde50463be0800000000000000
+      internalID: -1497939049867475453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_6
+      rect:
+        serializedVersion: 2
+        x: 5931
+        y: 3
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70aab69aa20b7a020800000000000000
+      internalID: 2353043027601893895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_7
+      rect:
+        serializedVersion: 2
+        x: 6011
+        y: 3
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a074c37db677981f0800000000000000
+      internalID: -1042170533703301366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_8
+      rect:
+        serializedVersion: 2
+        x: 6499
+        y: 0
+        width: 1206
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c0ad359dc0a4f90800000000000000
+      internalID: -6968743345848185819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_9
+      rect:
+        serializedVersion: 2
+        x: 7803
+        y: 0
+        width: 1234
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420f986f149a3c090800000000000000
+      internalID: -8015376811015147484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_10
+      rect:
+        serializedVersion: 2
+        x: 9103
+        y: 0
+        width: 1298
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1598dd6993f53ed10800000000000000
+      internalID: 2153669747762104657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_11
+      rect:
+        serializedVersion: 2
+        x: 10403
+        y: 0
+        width: 1298
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1129bc5490a45f550800000000000000
+      internalID: 6193938266204115473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_12
+      rect:
+        serializedVersion: 2
+        x: 11703
+        y: 0
+        width: 1298
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b592253a42e8d8e0800000000000000
+      internalID: -1668334853593852487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_13
+      rect:
+        serializedVersion: 2
+        x: 13003
+        y: 0
+        width: 1298
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8078038f31ea7350800000000000000
+      internalID: 6015367915204276366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_14
+      rect:
+        serializedVersion: 2
+        x: 14303
+        y: 0
+        width: 1297
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106e339ccf71fdb80800000000000000
+      internalID: -8367943208156273151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_15
+      rect:
+        serializedVersion: 2
+        x: 6155
+        y: 0
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d461e72e4b5c32f50800000000000000
+      internalID: 6855540438472726093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_16
+      rect:
+        serializedVersion: 2
+        x: 6199
+        y: 3
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcaf31ef718b62b10800000000000000
+      internalID: 1956453501325540045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_17
+      rect:
+        serializedVersion: 2
+        x: 7307
+        y: 0
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3203ae7c866a9710800000000000000
+      internalID: 1700784562891850301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death crawl 2_18
+      rect:
+        serializedVersion: 2
+        x: 7319
+        y: 0
+        width: 54
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb1b53631c32b7330800000000000000
+      internalID: 3709598030814884284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Death crawl 2_0: -6983397893145320760
+      Death crawl 2_1: 2677363269272309430
+      Death crawl 2_10: 2153669747762104657
+      Death crawl 2_11: 6193938266204115473
+      Death crawl 2_12: -1668334853593852487
+      Death crawl 2_13: 6015367915204276366
+      Death crawl 2_14: -8367943208156273151
+      Death crawl 2_15: 6855540438472726093
+      Death crawl 2_16: 1956453501325540045
+      Death crawl 2_17: 1700784562891850301
+      Death crawl 2_18: 3709598030814884284
+      Death crawl 2_2: -6898139071670752762
+      Death crawl 2_3: 5959214285315759526
+      Death crawl 2_4: -1180093829279348686
+      Death crawl 2_5: -1497939049867475453
+      Death crawl 2_6: 2353043027601893895
+      Death crawl 2_7: -1042170533703301366
+      Death crawl 2_8: -6968743345848185819
+      Death crawl 2_9: -8015376811015147484
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
