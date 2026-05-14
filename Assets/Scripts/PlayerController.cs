@@ -46,6 +46,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float armAttackMultiplier = 2f;
     [SerializeField] bool armRipped = false;
 
+    [Header("Projectile Settings")]
+    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] Transform projectileFirePoint;
+
+    [SerializeField] int maxAmmo = 16;
+    [SerializeField] float ammoRegenTime = 1.5f;
+
+    [SerializeField] float projectileDamage = 25f;
+    [SerializeField] float fireCooldown = 1f;
+
+    [SerializeField] int currentAmmo;
+    [SerializeField] bool regeneratingAmmo;
+
+    float fireCooldownTimer;
+
     [Header("Recoil Settings")]
     [SerializeField] int recoilXSteps = 5;
     [SerializeField] int recoilYSteps = 5;
@@ -93,6 +108,8 @@ public class PlayerController : MonoBehaviour
         gravity = rb.gravityScale;
 
         originalScale = transform.localScale;
+
+        currentAmmo = maxAmmo;
     }
 
     private void OnDrawGizmos()
@@ -166,6 +183,56 @@ public class PlayerController : MonoBehaviour
     {
         stepsYRecoiled = 0;
         pState.recoilingY = false;
+    }
+
+    void ShootProjectile()
+    {
+        if (pState.locked) return;
+
+        if(fireCooldownTimer < fireCooldown)
+        {
+            Debug.Log("Can't throw yet!");
+            return;
+        }
+
+        if (currentAmmo <= 1)
+        {
+            TakeDamage(999);
+            return;
+        }
+
+        fireCooldownTimer = 0;
+
+        currentAmmo--;
+
+        GameObject projectile = Instantiate(projectilePrefab, projectileFirePoint.position, Quaternion.identity);
+
+        Vector2 direction = facingDirection == 1 ? Vector2.right : Vector2.left;
+
+        projectile.GetComponent<PlayerProjectile>().Initialize(direction, projectileDamage);
+
+        if (!regeneratingAmmo)
+        {
+            StartCoroutine(RegeneratenAmmo());
+        }
+
+        Debug.Log("Ammo: " + currentAmmo);
+    }
+
+    IEnumerator RegeneratenAmmo()
+    {
+        regeneratingAmmo = true;
+
+        while (currentAmmo < maxAmmo)
+        {
+            yield return new WaitForSeconds(ammoRegenTime);
+
+            currentAmmo++;
+
+            Debug.Log("Ammo Regenerated: " + currentAmmo);
+        }
+
+        regeneratingAmmo = false;
     }
 
     public void TakeDamage(float _damage)
@@ -262,6 +329,7 @@ public class PlayerController : MonoBehaviour
     {
         GetInputs();
         UpdateJumpVariable();
+        fireCooldownTimer += Time.deltaTime;
 
         if (pState.dashing) return;
 
@@ -293,6 +361,11 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))
         {
             armAttack();
+        }
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            ShootProjectile();
         }
 
         xAxis = Input.GetAxisRaw("Horizontal");

@@ -59,6 +59,7 @@ public class Crawler : BaseEnemyClass
                     {
                         if (attackTimer <= 0)
                         {
+                            isAttacking = true;
                             StartCoroutine(AttackRoutine());
                         }
                     }
@@ -72,13 +73,12 @@ public class Crawler : BaseEnemyClass
 
     IEnumerator AttackRoutine()
     {
-        isAttacking = true;
-
         attackTimer = attackCooldown;
+
+        anim.SetBool("Walking", false);
 
         rb.linearVelocity = Vector2.zero;
 
-        anim.SetBool("Walking", false);
         anim.SetTrigger("Attack");
 
         yield return new WaitForSeconds(0.3f);
