@@ -78,14 +78,12 @@ public class Crawler : BaseEnemyClass
 
         rb.linearVelocity = Vector2.zero;
 
+        anim.SetBool("Walking", false);
         anim.SetTrigger("Attack");
 
         yield return new WaitForSeconds(0.3f);
 
-        if (Vector2.Distance(
-            transform.position,
-            PlayerController.Instance.transform.position
-        ) <= attackRange + 0.5f)
+        if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) <= attackRange + 0.5f)
         {
             PlayerController.Instance.TakeDamage(damage);
         }
@@ -100,16 +98,12 @@ public class Crawler : BaseEnemyClass
         if (PlayerController.Instance.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3
-                (-Mathf.Abs(transform.localScale.x),
-                transform.localScale.y,
-                transform.localScale.z);
+                (-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else
         {
             transform.localScale = new Vector3
-                (Mathf.Abs(transform.localScale.x),
-                transform.localScale.y,
-                transform.localScale.z);
+                (Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
 }
