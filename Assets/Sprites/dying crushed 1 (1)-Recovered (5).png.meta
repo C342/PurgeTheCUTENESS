@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 24a0e7e4073d3e84d810443649f35c6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5903520485719029858
+    second: dying crushed 1 (1)-Recovered (5)_0
+  - first:
+      213: 1089549933101968223
+    second: dying crushed 1 (1)-Recovered (5)_1
+  - first:
+      213: 694570790932923178
+    second: dying crushed 1 (1)-Recovered (5)_2
+  - first:
+      213: -5914590355365439262
+    second: dying crushed 1 (1)-Recovered (5)_3
+  - first:
+      213: -4039782142557852632
+    second: dying crushed 1 (1)-Recovered (5)_4
+  - first:
+      213: -3817502535044243857
+    second: dying crushed 1 (1)-Recovered (5)_5
+  - first:
+      213: 4943012893787490865
+    second: dying crushed 1 (1)-Recovered (5)_6
+  - first:
+      213: -7953609442655470401
+    second: dying crushed 1 (1)-Recovered (5)_7
+  - first:
+      213: 8291444395655681717
+    second: dying crushed 1 (1)-Recovered (5)_8
+  - first:
+      213: 7180949014733040427
+    second: dying crushed 1 (1)-Recovered (5)_9
+  - first:
+      213: -1155349596878727489
+    second: dying crushed 1 (1)-Recovered (5)_10
+  - first:
+      213: -7411380003065348607
+    second: dying crushed 1 (1)-Recovered (5)_11
+  - first:
+      213: 7885977261610639801
+    second: dying crushed 1 (1)-Recovered (5)_12
+  - first:
+      213: 8077031515517681546
+    second: dying crushed 1 (1)-Recovered (5)_13
+  - first:
+      213: -8720592824309374744
+    second: dying crushed 1 (1)-Recovered (5)_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 31
+        width: 57
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97c97c756b721ea0800000000000000
+      internalID: -5903520485719029858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 28
+        width: 52
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5be79734ebde1f00800000000000000
+      internalID: 1089549933101968223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 28
+        width: 62
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a234be0547c93a900800000000000000
+      internalID: 694570790932923178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_3
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 26
+        width: 64
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8dd7c98672beda0800000000000000
+      internalID: -5914590355365439262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_4
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 29
+        width: 118
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c6fd68b8fcfe7c0800000000000000
+      internalID: -4039782142557852632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_5
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 35
+        width: 76
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ed88d9ba1850bc0800000000000000
+      internalID: -3817502535044243857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_6
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 35
+        width: 76
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a0166a90c199440800000000000000
+      internalID: 4943012893787490865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_7
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 0
+        width: 112
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcf3581a5a1f9190800000000000000
+      internalID: -7953609442655470401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_8
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 31
+        width: 81
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6d5f57fb0211370800000000000000
+      internalID: 8291444395655681717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_9
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 36
+        width: 79
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2baa55251bd7a360800000000000000
+      internalID: 7180949014733040427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_10
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 34
+        width: 79
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb617a6b9af57ffe0800000000000000
+      internalID: -1155349596878727489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_11
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 30
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10e3bd5872d752990800000000000000
+      internalID: -7411380003065348607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_12
+      rect:
+        serializedVersion: 2
+        x: 2460
+        y: 26
+        width: 79
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b12c19a98e907d60800000000000000
+      internalID: 7885977261610639801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_13
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 22
+        width: 84
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ff0129e51671070800000000000000
+      internalID: 8077031515517681546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dying crushed 1 (1)-Recovered (5)_14
+      rect:
+        serializedVersion: 2
+        x: 2855
+        y: 19
+        width: 82
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0283ca70b3af680800000000000000
+      internalID: -8720592824309374744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dying crushed 1 (1)-Recovered (5)_0: -5903520485719029858
+      dying crushed 1 (1)-Recovered (5)_1: 1089549933101968223
+      dying crushed 1 (1)-Recovered (5)_10: -1155349596878727489
+      dying crushed 1 (1)-Recovered (5)_11: -7411380003065348607
+      dying crushed 1 (1)-Recovered (5)_12: 7885977261610639801
+      dying crushed 1 (1)-Recovered (5)_13: 8077031515517681546
+      dying crushed 1 (1)-Recovered (5)_14: -8720592824309374744
+      dying crushed 1 (1)-Recovered (5)_2: 694570790932923178
+      dying crushed 1 (1)-Recovered (5)_3: -5914590355365439262
+      dying crushed 1 (1)-Recovered (5)_4: -4039782142557852632
+      dying crushed 1 (1)-Recovered (5)_5: -3817502535044243857
+      dying crushed 1 (1)-Recovered (5)_6: 4943012893787490865
+      dying crushed 1 (1)-Recovered (5)_7: -7953609442655470401
+      dying crushed 1 (1)-Recovered (5)_8: 8291444395655681717
+      dying crushed 1 (1)-Recovered (5)_9: 7180949014733040427
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

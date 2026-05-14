@@ -355,13 +355,19 @@ public class PlayerController : MonoBehaviour
     {
         canDash = false;
         pState.dashing = true;
+
         anim.SetTrigger("Dashing");
+
         rb.gravityScale = 0;
         rb.linearVelocity = new Vector2(facingDirection * dashSpeed, 0);
+
         yield return new WaitForSeconds(dashTime);
+
         rb.gravityScale = gravity;
         pState.dashing = false;
+
         yield return new WaitForSeconds(dashCooldown);
+
         canDash = true;
     }
 
