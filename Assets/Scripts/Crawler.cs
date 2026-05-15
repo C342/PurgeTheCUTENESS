@@ -9,11 +9,12 @@ public class Crawler : BaseEnemyClass
     [SerializeField] private float attackRange = 2f;
     private bool isAttacking;
     private float attackTimer;
+    [SerializeField] private Animator crawlAnimator;
 
     protected void Awake()
     {
         base.Awake();
-        anim = GetComponent<Animator>();
+        crawlAnimator = GetComponent<Animator>();
     }
 
     void Start()
@@ -68,18 +69,18 @@ public class Crawler : BaseEnemyClass
 
         FlipTowardsPlayer();
 
-        anim.SetBool("Walking", isMoving && !isAttacking);
+        crawlAnimator.SetBool("Walking", isMoving && !isAttacking);
     }
 
     IEnumerator AttackRoutine()
     {
         attackTimer = attackCooldown;
 
-        anim.SetBool("Walking", false);
+        crawlAnimator.SetBool("Walking", false);
 
         rb.linearVelocity = Vector2.zero;
 
-        anim.SetTrigger("Attack");
+        crawlAnimator.SetBool("Attack", true);
 
         yield return new WaitForSeconds(0.3f);
 
@@ -91,6 +92,7 @@ public class Crawler : BaseEnemyClass
         yield return new WaitForSeconds(2.5f);
 
         isAttacking = false;
+        crawlAnimator.SetBool("Attack", false);
     }
 
     private void FlipTowardsPlayer()

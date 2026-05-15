@@ -19,6 +19,7 @@ public class DialogueTrigger : MonoBehaviour
             "THERE ARE CREATURES OF BONE AND FLESH THAT HUNT YOUR..",
             "<color=#FF69B4>CUTENESS.</color>",
             "USE YOUR <color=#DFD0B7>RIBS</color> TO FIGHT BACK.",
+            "YOU ARE ONLY HUMAN, YOUR BODY CAN ONLY TAKE SO MUCH.",
             "...",
             "M.",
             "...",

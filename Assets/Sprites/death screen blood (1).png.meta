@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 461ad374192063643ae620cf314549d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7545712793277743789
+    second: death screen blood (1)_0
+  - first:
+      213: -1691975191591019865
+    second: death screen blood (1)_1
+  - first:
+      213: 177054475132243800
+    second: death screen blood (1)_2
+  - first:
+      213: 3737452709735220879
+    second: death screen blood (1)_3
+  - first:
+      213: -3465495893653314319
+    second: death screen blood (1)_4
+  - first:
+      213: -2326098854765661711
+    second: death screen blood (1)_5
+  - first:
+      213: -6754016333085288678
+    second: death screen blood (1)_6
+  - first:
+      213: 8380374564875369096
+    second: death screen blood (1)_7
+  - first:
+      213: 5219831371333288178
+    second: death screen blood (1)_8
+  - first:
+      213: 5662972013659724966
+    second: death screen blood (1)_9
+  - first:
+      213: -8095368988662057581
+    second: death screen blood (1)_10
+  - first:
+      213: 3401768140087838816
+    second: death screen blood (1)_11
+  - first:
+      213: 6625173170361489378
+    second: death screen blood (1)_12
+  - first:
+      213: 4271290461721955569
+    second: death screen blood (1)_13
+  - first:
+      213: -4776423394074485725
+    second: death screen blood (1)_14
+  - first:
+      213: -1131715285649690061
+    second: death screen blood (1)_15
+  - first:
+      213: -3989424585955610392
+    second: death screen blood (1)_16
+  - first:
+      213: -8214195554087042400
+    second: death screen blood (1)_17
+  - first:
+      213: 3009601686446203232
+    second: death screen blood (1)_18
+  - first:
+      213: -775961978003609778
+    second: death screen blood (1)_19
+  - first:
+      213: 9010280854987496661
+    second: death screen blood (1)_20
+  - first:
+      213: -119038395050064865
+    second: death screen blood (1)_21
+  - first:
+      213: 7137230988741550391
+    second: death screen blood (1)_22
+  - first:
+      213: -5170058353910965497
+    second: death screen blood (1)_23
+  - first:
+      213: 7880541868728677477
+    second: death screen blood (1)_24
+  - first:
+      213: 5804968772116317609
+    second: death screen blood (1)_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: death screen blood (1)_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 6498
+        width: 1670
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2c07c7ec1c7b860800000000000000
+      internalID: 7545712793277743789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_1
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 6498
+        width: 1670
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aa91781785e488e0800000000000000
+      internalID: -1691975191591019865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_2
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 6498
+        width: 1670
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f86286b16057200800000000000000
+      internalID: 177054475132243800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_3
+      rect:
+        serializedVersion: 2
+        x: 5864
+        y: 6498
+        width: 1670
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86c69800791ed330800000000000000
+      internalID: 3737452709735220879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_4
+      rect:
+        serializedVersion: 2
+        x: 7784
+        y: 6498
+        width: 1678
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4283088d518efc0800000000000000
+      internalID: -3465495893653314319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_5
+      rect:
+        serializedVersion: 2
+        x: 9704
+        y: 6498
+        width: 1678
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1ff317a6908bfd0800000000000000
+      internalID: -2326098854765661711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_6
+      rect:
+        serializedVersion: 2
+        x: 11624
+        y: 6498
+        width: 1678
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17d34bede9e442a0800000000000000
+      internalID: -6754016333085288678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 5418
+        width: 1678
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a7d1004421d4470800000000000000
+      internalID: 8380374564875369096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_8
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 5418
+        width: 1678
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0c2c3f9f0907840800000000000000
+      internalID: 5219831371333288178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_9
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 5399
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac9a2fea0be69e40800000000000000
+      internalID: 5662972013659724966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_10
+      rect:
+        serializedVersion: 2
+        x: 5864
+        y: 5399
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395b511cbc877af80800000000000000
+      internalID: -8095368988662057581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_11
+      rect:
+        serializedVersion: 2
+        x: 7784
+        y: 5399
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0684d2e9912853f20800000000000000
+      internalID: 3401768140087838816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_12
+      rect:
+        serializedVersion: 2
+        x: 9704
+        y: 5399
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e758d295e751fb50800000000000000
+      internalID: 6625173170361489378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_13
+      rect:
+        serializedVersion: 2
+        x: 11624
+        y: 5399
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc837f6b0ca64b30800000000000000
+      internalID: 4271290461721955569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c135bca3cb6bdb0800000000000000
+      internalID: -4776423394074485725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_15
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33278fb91f65b40f0800000000000000
+      internalID: -1131715285649690061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_16
+      rect:
+        serializedVersion: 2
+        x: 3944
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0f7e7d977b2a8c0800000000000000
+      internalID: -3989424585955610392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_17
+      rect:
+        serializedVersion: 2
+        x: 5864
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a28c0b0aa0510e80800000000000000
+      internalID: -8214195554087042400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_18
+      rect:
+        serializedVersion: 2
+        x: 7784
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061ea0cc9c044c920800000000000000
+      internalID: 3009601686446203232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_19
+      rect:
+        serializedVersion: 2
+        x: 9704
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47a2e531ba3b35f0800000000000000
+      internalID: -775961978003609778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_20
+      rect:
+        serializedVersion: 2
+        x: 11624
+        y: 4319
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc5808f2b2fa0d70800000000000000
+      internalID: 9010280854987496661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_21
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 3239
+        width: 1678
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14886cd537195ef0800000000000000
+      internalID: -119038395050064865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 3239
+        width: 1886
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731a9d305c98c0360800000000000000
+      internalID: 7137230988741550391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_23
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 3239
+        width: 9601
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b981bb1534048b0800000000000000
+      internalID: -5170058353910965497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2159
+        width: 13440
+        height: 1034
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5647a23a31f4d5d60800000000000000
+      internalID: 7880541868728677477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death screen blood (1)_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 13440
+        height: 2132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a58a3a97546f8050800000000000000
+      internalID: 5804968772116317609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      death screen blood (1)_0: 7545712793277743789
+      death screen blood (1)_1: -1691975191591019865
+      death screen blood (1)_10: -8095368988662057581
+      death screen blood (1)_11: 3401768140087838816
+      death screen blood (1)_12: 6625173170361489378
+      death screen blood (1)_13: 4271290461721955569
+      death screen blood (1)_14: -4776423394074485725
+      death screen blood (1)_15: -1131715285649690061
+      death screen blood (1)_16: -3989424585955610392
+      death screen blood (1)_17: -8214195554087042400
+      death screen blood (1)_18: 3009601686446203232
+      death screen blood (1)_19: -775961978003609778
+      death screen blood (1)_2: 177054475132243800
+      death screen blood (1)_20: 9010280854987496661
+      death screen blood (1)_21: -119038395050064865
+      death screen blood (1)_22: 7137230988741550391
+      death screen blood (1)_23: -5170058353910965497
+      death screen blood (1)_24: 7880541868728677477
+      death screen blood (1)_25: 5804968772116317609
+      death screen blood (1)_3: 3737452709735220879
+      death screen blood (1)_4: -3465495893653314319
+      death screen blood (1)_5: -2326098854765661711
+      death screen blood (1)_6: -6754016333085288678
+      death screen blood (1)_7: 8380374564875369096
+      death screen blood (1)_8: 5219831371333288178
+      death screen blood (1)_9: 5662972013659724966
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

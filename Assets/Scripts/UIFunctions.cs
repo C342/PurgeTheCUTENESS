@@ -13,7 +13,7 @@ public class UIFunctions : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
+
     public void OptionsButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -22,5 +22,10 @@ public class UIFunctions : MonoBehaviour
     public void ReturnButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void DeathScreen(string name)
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene(string("DeathScreen");
     }
 }

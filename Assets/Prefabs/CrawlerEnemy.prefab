@@ -233,6 +233,7 @@ MonoBehaviour:
   followDistance: 20
   attackCooldown: 1
   attackRange: 2
+  crawlAnimator: {fileID: 3359306391282069306}
 --- !u!95 &3359306391282069306
 Animator:
   serializedVersion: 7
